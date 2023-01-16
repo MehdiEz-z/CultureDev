@@ -1,0 +1,21 @@
+.image-carousel{
+    .imageC{
+        @include w-h(100%,null);
+    }
+}
+.text-carousel{
+    @include flex(flex,center,center,column);
+    margin-bottom: 6rem;
+    text-align: center;
+    h1{
+        @include font(3.5rem,900,$blue-one);
+        margin-bottom: 1rem
+    }
+    h4{
+        @include font(1rem,400,$blue-one);
+        padding: 0 2rem;
+        span{
+            @include font(1.1rem,500,$orange)
+        }
+    }
+}
