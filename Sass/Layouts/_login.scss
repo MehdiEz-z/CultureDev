@@ -3,6 +3,9 @@
     @include w-h(100%,100%);
     max-width: 300px;
     margin: 0 auto;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    transition: opacity 0.02s 0.4s;
     .logo{
         @include flex(flex,center,null,null);
         img{
