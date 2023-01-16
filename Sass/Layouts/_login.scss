@@ -46,12 +46,22 @@
                 background: none;
                 border-bottom: 1px solid $grey;
                 @include font(.9rem,null,$black);
+                transition: 0.4s;
+                &.active-input{
+                    border-bottom: 1px solid $blue-two; 
+                    + label{
+                        font-size: .65rem;
+                        top: -2.5px;
+                        color: $blue-two
+                    }
+                }
             }
             label{
                 @include position(absolute,50%,0);
                 transform: translateY(-50%);
                 @include font(.9rem,null,$grey);
                 pointer-events: none;
+                transition: 0.4s;
             }
         }
         .text{

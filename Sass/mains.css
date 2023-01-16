@@ -68,6 +68,15 @@
   border-bottom: 1px solid #bbb;
   font-size: 0.9rem;
   color: #212121;
+  transition: 0.4s;
+}
+.login .form-content .inputs .input-field.active-input {
+  border-bottom: 1px solid #149BB4;
+}
+.login .form-content .inputs .input-field.active-input + label {
+  font-size: 0.65rem;
+  top: -2.5px;
+  color: #149BB4;
 }
 .login .form-content .inputs label {
   position: absolute;
@@ -77,6 +86,7 @@
   font-size: 0.9rem;
   color: #bbb;
   pointer-events: none;
+  transition: 0.4s;
 }
 .login .form-content .text {
   font-size: 0.65rem;
