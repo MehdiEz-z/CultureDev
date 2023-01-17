@@ -39,6 +39,10 @@
             }
         }
     }
+    .errorSignup{
+        @include flex(flex,center,center,null);
+        color: $danger;
+    }
     .form-content{
         .inputs{
             position: relative;

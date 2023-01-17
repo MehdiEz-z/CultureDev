@@ -1,3 +1,9 @@
+<?php
+
+require_once __DIR__.'/../app/controller/user_controller.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +29,7 @@
             <div class="interior-box">
                 <div class="forms">
                     <!-- Login Form -->
-                    <form action="" class="login">
+                    <form action="../app/controller/user_controller.php" method="POST" class="login">
                         <!-- Logo Form-->
                         <div class="logo">
                             <img src="./Assets/Images/logo.png" alt="CultureDevLogo">
@@ -34,17 +40,17 @@
                             <h2>CONNECTEZ-VOUS</h2>
                             <h6>Vous n'avez pas encore de compte ?</h6>
                             <a href="#" class="toggle">Inscrivez-vous</a>
-                        </div>
+                        </div> 
                         <!-- Content Form -->
                         <div class="form-content">
                             <!-- Email Input -->
                             <div class="inputs">
-                                <input class="input-field" name="email" type="email">
+                                <input class="input-field" name="email" type="email" >
                                 <label>Email</label>
                             </div>
                             <!-- Password Input -->
                             <div class="inputs">
-                                <input class="input-field" name="password" type="password">
+                                <input class="input-field" name="password" type="password" >
                                 <label>Mot de Passe</label>
                             </div>
                             <!-- Login Button -->
@@ -57,7 +63,7 @@
                         </div>
                     </form>
                     <!-- Sign-up Form -->
-                    <form action="" class="signup">
+                    <form action="../app/controller/user_controller.php" method="POST" class="signup">
                         <!-- Logo Form-->
                         <div class="logo">
                             <img src="./Assets/Images/logo.png" alt="CultureDevLogo">
@@ -69,37 +75,35 @@
                             <h6>Vous avez déjà un compte ?</h6>
                             <a href="#" class="toggle">Connectez-vous</a>
                         </div>
+                        <?php if(isset($_SESSION['errorSignup'])){ ?>         
+                            <span class="errorSignup"><?= $_SESSION['errorSignup'];?></span>             
+                        <?php  unset($_SESSION['errorSignup']); } ?>  
                         <!-- Content Form -->
                         <div class="form-content">
                             <!-- Username Input -->
                             <div class="inputs">
-                                <input class="input-field" name="username" type="text">
+                                <input class="input-field" name="Susername" type="text">
                                 <label>Nom d'utilisateur</label>
                             </div>
                             <!-- Email Input -->
                             <div class="inputs">
-                                <input class="input-field" name="email" type="email">
+                                <input class="input-field" name="Semail" type="email">
                                 <label>Email</label>
                             </div>
                             <!-- Password Input -->
                             <div class="inputs">
-                                <input class="input-field" name="password" type="password">
+                                <input class="input-field" name="Spassword" type="password">
                                 <label>Mot de Passe</label>
                             </div>
-                            <!-- Password Confirmation Input -->
-                            <div class="inputs">
-                                <input class="input-field" name="cpassword" type="password">
-                                <label>Confirmez votre mot de Passe</label>
-                            </div>
                             <!-- Login Button -->
-                            <input type="submit" class="login-btn" name="login" value="Inscrivez-vous" >
+                            <input type="submit" class="login-btn" name="signup" value="Inscrivez-vous" >
                         </div>
                     </form>
                 </div>
                 <div class="carousel">
                     <div class="text-carousel">
                         <h1>Bienvenu</h1>
-                        <h4><span>C</span><b>ulture</b><span>D</span><b>ev</b> est une communauté de plusieurs développeurs incroyables.</h4>
+                        <!-- <h4><span>C</span><b>ulture</b><span>D</span><b>ev</b> est une communauté de plusieurs développeurs incroyables.</h4> -->
                     </div>
                     <!-- Images Carousel -->
                     <div class="image-carousel">

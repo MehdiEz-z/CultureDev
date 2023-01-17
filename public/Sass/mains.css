@@ -4,10 +4,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
 .login {
@@ -160,6 +157,12 @@
 }
 .signup .head .toggle:hover {
   color: #149BB4;
+}
+.signup .errorSignup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #B94A48;
 }
 .signup .form-content .inputs {
   position: relative;
