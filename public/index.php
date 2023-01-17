@@ -40,7 +40,10 @@ require_once __DIR__.'/../app/controller/user_controller.php';
                             <h2>CONNECTEZ-VOUS</h2>
                             <h6>Vous n'avez pas encore de compte ?</h6>
                             <a href="#" class="toggle">Inscrivez-vous</a>
-                        </div> 
+                        </div>
+                        <?php if(isset($_SESSION['errorLogin'])){ ?>         
+                            <span class="errorLogin"><?= $_SESSION['errorLogin'];?></span>             
+                        <?php  unset($_SESSION['errorLogin']); } ?>  
                         <!-- Content Form -->
                         <div class="form-content">
                             <!-- Email Input -->

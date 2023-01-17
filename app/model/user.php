@@ -39,6 +39,14 @@ class User extends Connection
         $stmt->execute([NULL,$this->username,$this->email,$this->password]);
 
     }
+
+    public function login(){
+        $stmt = $this->connect()->prepare("SELECT * FROM user WHERE email=?");
+        $stmt->execute([$this->email]);
+        $user = $stmt->fetch();
+
+        return $user;
+    }
 }
 
 

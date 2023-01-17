@@ -14,7 +14,7 @@ function Signup(){
     $user->setEmail($_POST["Semail"]);
     $user->setPassword(password_hash($_POST['Spassword'],PASSWORD_BCRYPT));
 
-    $result = $user->checkEmail();
+    $result = $user->login();
     
     if($result){
         $_SESSION['errorSignup'] = 'Cet utilisateur exist deja'; 
@@ -25,6 +25,30 @@ function Signup(){
 
 } 
 
+function Login(){
+    $user = new User();
+    
+    $user->setEmail($_POST["email"]);
+    $user->setPassword($_POST["password"]);
+
+    $result = $user->login();
+    if($result){
+        $_SESSION['email'] = $result['email'];
+        $password_v = password_verify($_POST["password"],$result['password']);
+        if($password_v == $_POST["password"]){
+            $_SESSION['username'] = $result['username'];
+            header('location:dashboard.php');
+            die();
+
+        }else{
+            $_SESSION['errorLogin']= 'Mot de passe incorect';    
+        }
+    }else{
+        $_SESSION['errorLogin']= "Email incorrect";
+    }
+
+    header('location: ../../public/index.php');
+}
 
 
 ?>

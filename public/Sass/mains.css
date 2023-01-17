@@ -56,6 +56,12 @@
 .login .head .toggle:hover {
   color: #149BB4;
 }
+.login .errorLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #B94A48;
+}
 .login .form-content .inputs {
   position: relative;
   height: 37px;
