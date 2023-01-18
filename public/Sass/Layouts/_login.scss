@@ -39,7 +39,10 @@
     }
     .errorLogin{
         @include flex(flex,center,center,null);
-        color: $danger;
+        @include w-h(100%,null);
+        background-color: $errorBackg;
+        padding: .8rem 0;
+        color: $errorText;
     }
     .form-content{
         .inputs{

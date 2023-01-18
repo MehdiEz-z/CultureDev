@@ -17,7 +17,7 @@ require_once __DIR__.'/../app/controller/user_controller.php';
     <link rel="icon" href="./Assets/Images/logo.png">
 
     <!-- My Style -->
-    <link rel="stylesheet" href="./Sass/mains.css">
+    <link rel="stylesheet" href="./Assets/Css/mains.css">
 
     <!-- Fontawesome link -->
     <script src="https://kit.fontawesome.com/f57667c685.js" crossorigin="anonymous"></script>
@@ -39,7 +39,7 @@ require_once __DIR__.'/../app/controller/user_controller.php';
                         <div class="head">
                             <h2>CONNECTEZ-VOUS</h2>
                             <h6>Vous n'avez pas encore de compte ?</h6>
-                            <a href="#" class="toggle">Inscrivez-vous</a>
+                            <a href="#" class="toggle" id="inscriver">Inscrivez-vous</a>
                         </div>
                         <?php if(isset($_SESSION['errorLogin'])){ ?>         
                             <span class="errorLogin"><?= $_SESSION['errorLogin'];?></span>             
@@ -48,12 +48,12 @@ require_once __DIR__.'/../app/controller/user_controller.php';
                         <div class="form-content">
                             <!-- Email Input -->
                             <div class="inputs">
-                                <input class="input-field" name="email" type="email" >
+                                <input class="input-field" name="email" id="email" type="text" >
                                 <label>Email</label>
                             </div>
                             <!-- Password Input -->
                             <div class="inputs">
-                                <input class="input-field" name="password" type="password" >
+                                <input class="input-field" name="password" id="password" type="password" >
                                 <label>Mot de Passe</label>
                             </div>
                             <!-- Login Button -->
@@ -79,23 +79,23 @@ require_once __DIR__.'/../app/controller/user_controller.php';
                             <a href="#" class="toggle">Connectez-vous</a>
                         </div>
                         <?php if(isset($_SESSION['errorSignup'])){ ?>         
-                            <span class="errorSignup"><?= $_SESSION['errorSignup'];?></span>             
-                        <?php  unset($_SESSION['errorSignup']); } ?>  
+                            <span class="errorSignup"><?= $_SESSION['errorSignup'];}?></span>             
+                        
                         <!-- Content Form -->
                         <div class="form-content">
                             <!-- Username Input -->
                             <div class="inputs">
-                                <input class="input-field" name="Susername" type="text">
+                                <input class="input-field" name="Susername" id="username" type="text">
                                 <label>Nom d'utilisateur</label>
                             </div>
                             <!-- Email Input -->
                             <div class="inputs">
-                                <input class="input-field" name="Semail" type="email">
+                                <input class="input-field" name="Semail" id="Semail" type="email">
                                 <label>Email</label>
                             </div>
                             <!-- Password Input -->
                             <div class="inputs">
-                                <input class="input-field" name="Spassword" type="password">
+                                <input class="input-field" name="Spassword" id="Spassword" type="password">
                                 <label>Mot de Passe</label>
                             </div>
                             <!-- Login Button -->
@@ -120,5 +120,15 @@ require_once __DIR__.'/../app/controller/user_controller.php';
 
 <!-- JavaScript -->
 <script src="Assets/Javascript/script.js"></script>
+
+
+<?php
+if(isset($_SESSION['errorSignup'])){
+    echo '<script>document.querySelector("#inscriver").click();</script>';
+}
+unset($_SESSION['errorSignup']);
+?>
+
+
 
 </html>
