@@ -108,8 +108,8 @@ require_once __DIR__.'/../app/controller/user_controller.php';
                                 <span class="SpassErr1">Password is required</span>
                                 <span class="SpassErr2">Invalid password</span>
                             </div>
-                            <!-- Login Button -->
-                            <input type="submit" class="login-btn" name="signup" value="Inscrivez-vous" >
+                            <!-- Signup Button -->
+                            <input type="submit" class="login-btn" id="inscriver" name="signup" value="Inscrivez-vous" >
                         </div>
                     </form>
                 </div>
