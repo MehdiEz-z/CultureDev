@@ -26,45 +26,68 @@ inputs.forEach(inp => {
 
 //--------------------- Form Validation ---------------------//
 //***********************************************************//
-
+let  valide = true;
 // Get Inputs-field by Id Login
 let login           = document.querySelector(".login");
 let email           = login.querySelector("#email");
 let password        = login.querySelector("#password");
 
-login.addEventListener("submit", validateLogin);
+email.addEventListener("input", validateEmail);
+password.addEventListener("input", validatePass);
+email.addEventListener("blur", validateEmail);
+password.addEventListener("blur", validatePass);
 
-function validateLogin(event) {
+function validateEmail() {
     let emailValue      = email.value;
-    let passwordValue   = password.value;
-
     // Regex to Validate Email
     let emailRegex      = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     if (emailValue.length == 0 ) {
-        alert("Email is required");
-        event.preventDefault();
-        return false;
+        document.querySelector(".emailErr2").style.opacity = "0";
+        document.querySelector(".emailErr1").style.opacity = "1";
+        document.querySelector("#email").classList.add("active-err");
+        document.querySelector("#email").classList.remove("active-valid");
+        valide = false;
     }
     else if (!emailRegex.test(emailValue)) {
-        alert("Invalid email address");
-        event.preventDefault();
-        return false;
+        document.querySelector(".emailErr1").style.opacity = "0";
+        document.querySelector(".emailErr2").style.opacity = "1";
+        document.querySelector("#email").classList.add("active-err");
+        document.querySelector("#email").classList.remove("active-valid");
+        valide = false;
     }
+    else{
+        document.querySelector(".emailErr1").style.opacity = "0";
+        document.querySelector(".emailErr2").style.opacity = "0";
+        document.querySelector("#email").classList.add("active-valid");
+        document.querySelector("#email").classList.remove("active-err");
+        valide = true;
+    } 
+}
 
+function validatePass(){
+    let passwordValue   = password.value;
     // Regex to Validate PAssword
     let passwordRegex   = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
     if (passwordValue === "") {
-        alert("Password is required");
-        event.preventDefault();
-        return false;
+        document.querySelector(".passErr2").style.opacity = "0";
+        document.querySelector(".passErr1").style.opacity = "1";
+        document.querySelector("#password").classList.add("active-err");
+        valide = false;
     }
     else if (!passwordRegex.test(passwordValue)) {
-        alert("Invalid password");
-        event.preventDefault();
-        return false;
+        document.querySelector(".passErr1").style.opacity = "0";
+        document.querySelector(".passErr2").style.opacity = "1";
+        document.querySelector("#password").classList.add("active-err");
+        valide = false;
     }
-    return true;
+    else{
+        document.querySelector(".passErr1").style.opacity = "0";
+        document.querySelector(".passErr2").style.opacity = "0";
+        document.querySelector("#password").classList.add("active-valid");
+        valide = true;
+    } 
 }
+//-------------------------------------------------------------------------//
 
 // Get Inputs-field by Id Signup
 let signup              = document.querySelector(".signup");
@@ -72,50 +95,89 @@ let username            = signup.querySelector("#username");
 let Semail              = signup.querySelector("#Semail");
 let Spassword           = signup.querySelector("#Spassword");
 
-signup.addEventListener("submit", validateSignup);
+username.addEventListener("input", validateUsername)
+Semail.addEventListener("input", validateSemail);
+Spassword.addEventListener("input", validateSpass);
+username.addEventListener("blur", validateUsername);
+Semail.addEventListener("blur", validateSemail);
+Spassword.addEventListener("blur", validateSpass);
 
-function validateSignup(event){
-    let SemailValue     = Semail.value;
-    let SpasswordValue  = Spassword.value;
-    let usernameValue   = username.value;
-
+function validateUsername() {
+    let usernameValue      = username.value;
     // Regex to Validate Username
-    let usernameRegex = /^[a-zA-Z ]{2,30}$/;
+    let usernameRegex      = /^[a-zA-Z ]{2,30}$/;
     if (usernameValue.length == 0 ) {
-        alert("Username is required");
-        event.preventDefault();
-        return false;
+        document.querySelector(".usernameErr2").style.opacity = "0";
+        document.querySelector(".usernameErr1").style.opacity = "1";
+        document.querySelector("#username").classList.add("active-err");
+        document.querySelector("#username").classList.remove("active-valid");
+        valide = false;
     }
     else if (!usernameRegex.test(usernameValue)) {
-        alert("Invalid username address");
-        event.preventDefault();
-        return false;
+        document.querySelector(".usernameErr1").style.opacity = "0";
+        document.querySelector(".usernameErr2").style.opacity = "1";
+        document.querySelector("#username").classList.add("active-err");
+        document.querySelector("#username").classList.remove("active-valid");
+        valide = false;
     }
+    else{
+        document.querySelector(".usernameErr1").style.opacity = "0";
+        document.querySelector(".usernameErr2").style.opacity = "0";
+        document.querySelector("#username").classList.add("active-valid");
+        document.querySelector("#username").classList.remove("active-err");
+        valide = true;
+    } 
+}
 
+function validateSemail() {
+    let SemailValue      = Semail.value;
     // Regex to Validate Email
-    let SemailRegex     = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    let SemailRegex      = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     if (SemailValue.length == 0 ) {
-        alert("Email is required");
-        event.preventDefault();
-        return false;
+        document.querySelector(".SemailErr2").style.opacity = "0";
+        document.querySelector(".SemailErr1").style.opacity = "1";
+        document.querySelector("#Semail").classList.add("active-err");
+        document.querySelector("#Semail").classList.remove("active-valid");
+        valide = false;
     }
     else if (!SemailRegex.test(SemailValue)) {
-        alert("Invalid email address");
-        event.preventDefault();
-        return false;
+        document.querySelector(".SemailErr1").style.opacity = "0";
+        document.querySelector(".SemailErr2").style.opacity = "1";
+        document.querySelector("#Semail").classList.add("active-err");
+        document.querySelector("#Semail").classList.remove("active-valid");
+        valide = false;
     }
+    else{
+        document.querySelector(".SemailErr1").style.opacity = "0";
+        document.querySelector(".SemailErr2").style.opacity = "0";
+        document.querySelector("#Semail").classList.add("active-valid");
+        document.querySelector("#Semail").classList.remove("active-err");
+        valide = true;
+    } 
+}
 
+function validateSpass(){
+    let SpasswordValue   = Spassword.value;
     // Regex to Validate Password
-    let SpasswordRegex  = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
+    let SpasswordRegex   = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/;
     if (SpasswordValue === "") {
-        alert("Password is required");
-        event.preventDefault();
-        return false;
+        document.querySelector(".SpassErr2").style.opacity = "0";
+        document.querySelector(".SpassErr1").style.opacity = "1";
+        document.querySelector("#Spassword").classList.add("active-err");
+        document.querySelector("#Spassword").classList.remove("active-valid");
+        valide = false;
     }
     else if (!SpasswordRegex.test(SpasswordValue)) {
-        alert("Invalid password");
-        event.preventDefault();
-        return false;
+        document.querySelector(".SpassErr1").style.opacity = "0";
+        document.querySelector(".SpassErr2").style.opacity = "1";
+        document.querySelector("#Spassword").classList.add("active-err");
+        document.querySelector("#Spassword").classList.remove("active-valid");
+        valide = false;
     }
-    return true;
+    else{
+        document.querySelector(".SpassErr1").style.opacity = "0";
+        document.querySelector(".SpassErr2").style.opacity = "0";
+        document.querySelector("#Spassword").classList.add("active-valid");
+        valide = true;
+    } 
 }

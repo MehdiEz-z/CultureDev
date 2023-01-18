@@ -50,14 +50,18 @@ require_once __DIR__.'/../app/controller/user_controller.php';
                             <div class="inputs">
                                 <input class="input-field" name="email" id="email" type="text" >
                                 <label>Email</label>
+                                <span class="emailErr1">Email is required</span>
+                                <span class="emailErr2">Invalid email address</span>
                             </div>
                             <!-- Password Input -->
                             <div class="inputs">
                                 <input class="input-field" name="password" id="password" type="password" >
                                 <label>Mot de Passe</label>
+                                <span class="passErr1">Password is required</span>
+                                <span class="passErr2">Invalid password</span>
                             </div>
                             <!-- Login Button -->
-                            <input type="submit" class="login-btn" name="login" value="Connectez-vous" >
+                            <input type="submit" class="login-btn" id="connecter" name="login" value="Connectez-vous" >
                             <!-- Forgot Password -->
                             <p class="text">
                                 Vous avez oublié votre mot de passe?
@@ -87,16 +91,22 @@ require_once __DIR__.'/../app/controller/user_controller.php';
                             <div class="inputs">
                                 <input class="input-field" name="Susername" id="username" type="text">
                                 <label>Nom d'utilisateur</label>
+                                <span class="usernameErr1">Username is required</span>
+                                <span class="usernameErr2">Invalid username</span>
                             </div>
                             <!-- Email Input -->
                             <div class="inputs">
-                                <input class="input-field" name="Semail" id="Semail" type="email">
+                                <input class="input-field" name="Semail" id="Semail" type="text">
                                 <label>Email</label>
+                                <span class="SemailErr1">Email is required</span>
+                                <span class="SemailErr2">Invalid email address</span>
                             </div>
                             <!-- Password Input -->
                             <div class="inputs">
                                 <input class="input-field" name="Spassword" id="Spassword" type="password">
                                 <label>Mot de Passe</label>
+                                <span class="SpassErr1">Password is required</span>
+                                <span class="SpassErr2">Invalid password</span>
                             </div>
                             <!-- Login Button -->
                             <input type="submit" class="login-btn" name="signup" value="Inscrivez-vous" >

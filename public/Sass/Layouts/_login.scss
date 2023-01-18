@@ -65,6 +65,23 @@
                         color: $blue-two
                     }
                 }
+                &.active-err{
+                    border-bottom: 2px solid $errorText; 
+                    + label{
+                        font-size: .65rem;
+                        top: -2.5px;
+                        color: $errorText
+                    }
+                }
+                &.active-valid{
+                    border-bottom: 2px solid $validText; 
+                    + label{
+                        font-size: .65rem;
+                        top: -2.5px;
+                        color: $validText
+                    }
+                }
+
             }
             label{
                 @include position(absolute,50%,0);
@@ -72,6 +89,11 @@
                 @include font(.9rem,null,$grey);
                 pointer-events: none;
                 transition: 0.4s;
+            }
+            span{
+                @include position(absolute,110%,0);
+                @include font(.6rem,500,$errorText);
+                opacity: 0;
             }
         }
         .text{

@@ -90,6 +90,22 @@
   top: -2.5px;
   color: #149BB4;
 }
+.login .form-content .inputs .input-field.active-err {
+  border-bottom: 2px solid #B94A48;
+}
+.login .form-content .inputs .input-field.active-err + label {
+  font-size: 0.65rem;
+  top: -2.5px;
+  color: #B94A48;
+}
+.login .form-content .inputs .input-field.active-valid {
+  border-bottom: 2px solid #24b324;
+}
+.login .form-content .inputs .input-field.active-valid + label {
+  font-size: 0.65rem;
+  top: -2.5px;
+  color: #24b324;
+}
 .login .form-content .inputs label {
   position: absolute;
   top: 50%;
@@ -99,6 +115,15 @@
   color: #bbb;
   pointer-events: none;
   transition: 0.4s;
+}
+.login .form-content .inputs span {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: #B94A48;
+  opacity: 0;
 }
 .login .form-content .text {
   font-size: 0.65rem;
@@ -171,6 +196,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  background-color: #f9dcda;
+  padding: 0.8rem 0;
   color: #B94A48;
 }
 .signup .form-content .inputs {
@@ -198,6 +226,22 @@
   top: -2.5px;
   color: #149BB4;
 }
+.signup .form-content .inputs .input-field.active-err {
+  border-bottom: 2px solid #B94A48;
+}
+.signup .form-content .inputs .input-field.active-err + label {
+  font-size: 0.65rem;
+  top: -2.5px;
+  color: #B94A48;
+}
+.signup .form-content .inputs .input-field.active-valid {
+  border-bottom: 2px solid #24b324;
+}
+.signup .form-content .inputs .input-field.active-valid + label {
+  font-size: 0.65rem;
+  top: -2.5px;
+  color: #24b324;
+}
 .signup .form-content .inputs label {
   position: absolute;
   top: 50%;
@@ -207,6 +251,15 @@
   color: #bbb;
   pointer-events: none;
   transition: 0.4s;
+}
+.signup .form-content .inputs span {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: #B94A48;
+  opacity: 0;
 }
 .signup .form-content .text {
   font-size: 0.65rem;
