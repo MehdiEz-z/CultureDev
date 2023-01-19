@@ -24,7 +24,7 @@ require_once __DIR__.'/../app/controller/user_controller.php';
 
 </head>
 <body>
-    <main>
+    <main class="users">
         <div class="box">
             <div class="interior-box">
                 <div class="forms">

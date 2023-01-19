@@ -1,0 +1,65 @@
+.dashbd{
+    margin-top: 1.4rem;
+    .top-main{
+        @include flex(flex,center,space-between,null);
+        h1{
+            @include font(2.5rem,900,$black);
+        }
+        .search{
+            @include flex(flex,center,space-between,null);
+            background-color: $white;
+            border-radius: 50px;
+            width: 26rem;
+            padding: 5px;
+            margin-left: 1rem;
+            input{
+                @include outline;
+                background-color: transparent;
+                text-indent: 1rem;
+                width: 85%;
+            }
+            button{
+                @include flex(flex,center,center,null);
+                @include outline;
+                cursor: pointer;
+                border-radius: 50%;
+                background-color: $white;
+                color: $blue-one;
+                padding: .2rem;
+                margin-right: .3rem;
+            }
+        }
+    }
+    .statistiques{
+        @include grid(grid,repeat(3, 1fr),null);
+        gap: 1.6rem;
+        > div{
+            background: $white;
+            padding: 1.5rem;
+            border-radius: .5rem;
+            border-bottom: 5px solid $orange;
+            margin-top: 1rem;
+            box-shadow: 0 1rem 3rem rgba(10, 10, 10, 0.12);
+            transition: .4s;
+            &:hover{
+                box-shadow: none;
+            }
+            i{
+                background: $orange;
+                padding: .5rem;
+                margin-bottom: 1rem;
+                border-radius: 50%;
+                @include font(1.2rem,null,$white);
+            }
+            .middle{
+                @include flex(flex,center,space-between,null);
+                h3{
+                    @include font(1rem,500,$black);
+                }
+                h1{
+                    @include font(2.5rem,900,$orange); 
+                }
+            }
+        }
+    }
+}
