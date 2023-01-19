@@ -1,17 +1,18 @@
 .right-dash{
     margin-top: 1.4rem;
     .top{
-        @include flex(flex,null,end,null);
+        @include flex(flex,center,end,null);
         gap: 2rem;
         button{
             display: none;
         }  
         .theme-toggler{
             @include flex(flex,center,space-between,null);
-            @include w-h(3.2rem,1.2rem);
+            @include w-h(3.2rem,1.3rem);
             cursor: pointer;
             border-radius: .3rem;
             background: $white;
+            margin-right: 2rem;
             i{
                 @include font(.8rem,null,$black);
                 @include flex(flex,center,center,null);
@@ -28,7 +29,6 @@
             gap: 1rem;
             text-align: right;
             .infos{
-                color: $black;
                 @include font(.8rem,500,$black);
                 span{
                     @include font(.8rem,900,$blue-one); 
@@ -40,6 +40,71 @@
             img{
                 width: 2rem;
                 border-radius: 50%;
+                margin-left: .5rem;
+            }
+        }
+    }
+    .recent-posts{
+        margin-top: 1.4rem;
+        h2{
+            margin-bottom: .8rem;
+            @include font(1.5rem,700,$black);
+        }
+        .posts{
+            @include card($blue-tree);
+            .post{
+                @include grid(grid,2.6rem auto,null);
+                gap: 1rem;
+                margin-bottom: 1.5rem;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                img{
+                    width: 2rem;
+                    border-radius: 50%;
+                    margin-left: .5rem;
+                }
+                .post-infos{
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    p{
+                        @include font(.8rem,500,$black);
+                        .username-post{
+                            @include font(.8rem,900,$blue-one); 
+                        }
+                        .title-post{
+                            @include font(.8rem,900,$black);
+                        }
+                    }
+                    small{
+                        @include font(.7rem,400,$black);
+                    }
+                }
+            }
+        }
+    }
+    .add-categorie{
+        @include flex(flex,center,center,null);
+        margin-top: 1.5rem;
+        border-radius: .8rem;
+        padding: 2rem;
+        background: transparent;
+        border: 2px dashed $blue-one;
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover{
+            background: $white;
+            box-shadow: 0 1rem 3rem rgba(10, 10, 10, 0.12);
+        }
+        div{
+            @include flex(flex,center,null,null);
+            gap: .6rem;
+            h3{
+                @include font(1rem,700,$blue-one);
+            }
+            i{
+                @include font(1.2rem,null,$blue-one); 
             }
         }
     }

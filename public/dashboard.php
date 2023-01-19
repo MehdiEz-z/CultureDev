@@ -74,7 +74,7 @@
                     <i class="fa-solid fa-envelopes-bulk"></i>
                     <div class="middle">
                         <div class="express">
-                            <h3>Total Posts</h3></div>
+                            <h3>Total Articles</h3></div>
                         <div class="count">
                             <h1>25</h1>
                         </div>
@@ -104,6 +104,7 @@
                 </div>
             </div>
         </main>
+
         <!-- Right Dashboard content -->
         <div class="right-dash">
             <!-- Top Right Dashboard -->
@@ -119,7 +120,7 @@
                 <!-- Profile infos -->
                 <div class="profile">
                     <div class="infos">
-                        <p>Hey, <span>DANIEL</span></p>
+                        <p>Hey, <span>Mehdi Ezzahri</span></p>
                         <small>Admin</small>
                     </div>
                     <div class="photo-profile">
@@ -127,57 +128,64 @@
                     </div>
                 </div>
             </div>
-        <!-- Recents Posts -->
-        <div class="recent-posts">
-            <h2>Recents Post</h2>
-            <div class="posts">
-                <div class="post">
-                    <div class="profile-photo">
-                        <img src="./Assets/Images/user-1.jpg" alt="Photo de profile">
+            <!-- Recents Posts -->
+            <div class="recent-posts">
+                <h2>Articles Récents</h2>
+                <div class="posts">
+                    <div class="post">
+                        <div class="profile-photo">
+                            <img src="./Assets/Images/user-1.jpg" alt="Photo de profile">
+                        </div>
+                        <div class="post-infos">
+                            <p><span class="username-post">Mehdi Ezzahri</span> a publié un post : <span class="title-post">Titre d'article posté</span></p>
+                            <small>Il y a 2 minutes</small>
+                        </div>
                     </div>
-                    <div class="post-infos">
-                        <p><span>Mehdi Ezzahri</span> a publié un post</p>
-                        <small>Il y a 2 minutes</small>
+                    <div class="post">
+                        <div class="profile-photo">
+                            <img src="./Assets/Images/user-1.jpg" alt="Photo de profile">
+                        </div>
+                        <div class="post-infos">
+                            <p><span class="username-post">Mehdi Ezzahri</span> a publié un post : <span class="title-post">Titre d'article posté</span></p>
+                            <small>Il y a 2 minutes</small>
+                        </div>
                     </div>
-                </div>
-                <div class="post">
-                    <div class="profile-photo">
-                        <img src="./Assets/Images/user-1.jpg" alt="Photo de profile">
+                    <div class="post">
+                        <div class="profile-photo">
+                            <img src="./Assets/Images/user-1.jpg" alt="Photo de profile">
+                        </div>
+                        <div class="post-infos">
+                            <p><span class="username-post">Mehdi Ezzahri</span> a publié un post : <span class="title-post">Titre d'article posté</span></p>
+                            <small>Il y a 2 minutes</small>
+                        </div>
                     </div>
-                    <div class="post-infos">
-                        <p><span>Mehdi Ezzahri</span> a publié un post</p>
-                        <small>Il y a 2 minutes</small>
+                    <div class="post">
+                        <div class="profile-photo">
+                            <img src="./Assets/Images/user-1.jpg" alt="Photo de profile">
+                        </div>
+                        <div class="post-infos">
+                            <p><span class="username-post">Mehdi Ezzahri</span> a publié un post : <span class="title-post">Titre d'article posté</span></p>
+                            <small>Il y a 2 minutes</small>
+                        </div>
                     </div>
-                </div>
-                <div class="post">
-                    <div class="profile-photo">
-                        <img src="./Assets/Images/user-1.jpg" alt="Photo de profile">
-                    </div>
-                    <div class="post-infos">
-                        <p><span>Mehdi Ezzahri</span> a publié un post</p>
-                        <small>Il y a 2 minutes</small>
-                    </div>
-                </div>
-                <div class="post">
-                    <div class="profile-photo">
-                        <img src="./Assets/Images/user-1.jpg" alt="Photo de profile">
-                    </div>
-                    <div class="post-infos">
-                        <p><span>Mehdi Ezzahri</span> a publié un post</p>
-                        <small>Il y a 2 minutes</small>
-                    </div>
-                </div>
-                <div class="post">
-                    <div class="profile-photo">
-                        <img src="./Assets/Images/user-1.jpg" alt="Photo de profile">
-                    </div>
-                    <div class="post-infos">
-                        <p><span>Mehdi Ezzahri</span> a publié un post</p>
-                        <small>Il y a 2 minutes</small>
+                    <div class="post">
+                        <div class="profile-photo">
+                            <img src="./Assets/Images/user-1.jpg" alt="Photo de profile">
+                        </div>
+                        <div class="post-infos">
+                            <p><span class="username-post">Mehdi Ezzahri</span> a publié un post : <span class="title-post">Titre d'article posté</span></p>
+                            <small>Il y a 2 minutes</small>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <!-- Button add Categories -->
+            <div class="add-categorie">
+                <div>
+                    <i class="fa-solid fa-plus"></i>
+                    <h3>Ajouter une catégorie</h3>
+                </div>
+            </div>
         </div>
     </div>
 </body>

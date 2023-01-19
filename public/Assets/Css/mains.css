@@ -178,6 +178,7 @@ aside .sidebar a:hover i {
 }
 .right-dash .top {
   display: flex;
+  align-items: center;
   justify-content: end;
   gap: 2rem;
 }
@@ -189,10 +190,11 @@ aside .sidebar a:hover i {
   align-items: center;
   justify-content: space-between;
   width: 3.2rem;
-  height: 1.2rem;
+  height: 1.3rem;
   cursor: pointer;
   border-radius: 0.3rem;
   background: white;
+  margin-right: 2rem;
 }
 .right-dash .top .theme-toggler i {
   font-size: 0.8rem;
@@ -214,7 +216,6 @@ aside .sidebar a:hover i {
   text-align: right;
 }
 .right-dash .top .profile .infos {
-  color: #403f3f;
   font-size: 0.8rem;
   font-weight: 500;
   color: #403f3f;
@@ -232,6 +233,97 @@ aside .sidebar a:hover i {
 .right-dash .top .profile img {
   width: 2rem;
   border-radius: 50%;
+  margin-left: 0.5rem;
+}
+.right-dash .recent-posts {
+  margin-top: 1.4rem;
+}
+.right-dash .recent-posts h2 {
+  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #403f3f;
+}
+.right-dash .recent-posts .posts {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border-bottom: 5px solid #B3E0E1;
+  margin-top: 1rem;
+  box-shadow: 0 1rem 3rem rgba(10, 10, 10, 0.12);
+  transition: 0.4s;
+}
+.right-dash .recent-posts .posts:hover {
+  box-shadow: none;
+}
+.right-dash .recent-posts .posts .post {
+  display: grid;
+  grid-template-columns: 2.6rem auto;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.right-dash .recent-posts .posts .post:last-child {
+  margin-bottom: 0;
+}
+.right-dash .recent-posts .posts .post img {
+  width: 2rem;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+}
+.right-dash .recent-posts .posts .post .post-infos {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.right-dash .recent-posts .posts .post .post-infos p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #403f3f;
+}
+.right-dash .recent-posts .posts .post .post-infos p .username-post {
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: #16467D;
+}
+.right-dash .recent-posts .posts .post .post-infos p .title-post {
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: #403f3f;
+}
+.right-dash .recent-posts .posts .post .post-infos small {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: #403f3f;
+}
+.right-dash .add-categorie {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  border-radius: 0.8rem;
+  padding: 2rem;
+  background: transparent;
+  border: 2px dashed #16467D;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.right-dash .add-categorie:hover {
+  background: white;
+  box-shadow: 0 1rem 3rem rgba(10, 10, 10, 0.12);
+}
+.right-dash .add-categorie div {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.right-dash .add-categorie div h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #16467D;
+}
+.right-dash .add-categorie div i {
+  font-size: 1.2rem;
+  color: #16467D;
 }
 
 .login {

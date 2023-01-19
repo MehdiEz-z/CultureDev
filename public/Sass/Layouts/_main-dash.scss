@@ -34,16 +34,7 @@
         @include grid(grid,repeat(3, 1fr),null);
         gap: 1.6rem;
         > div{
-            background: $white;
-            padding: 1.5rem;
-            border-radius: .5rem;
-            border-bottom: 5px solid $orange;
-            margin-top: 1rem;
-            box-shadow: 0 1rem 3rem rgba(10, 10, 10, 0.12);
-            transition: .4s;
-            &:hover{
-                box-shadow: none;
-            }
+            @include card($orange);
             i{
                 background: $orange;
                 padding: .5rem;
