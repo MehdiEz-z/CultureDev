@@ -1,0 +1,46 @@
+.users{
+    @include w-h(100%,null);
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: $blue-two;
+    @include flex(flex,center,center,null);
+    .box{
+        position: relative;
+        @include w-h(100%,640px);
+        max-width: 1020px;
+        background-color: white;
+        border-radius: 3rem;
+        .interior-box{
+            @include position(absolute,50%,50%);
+            transform: translate(-50%,-50%);
+            width: calc(100% - 3rem);
+            height: calc(100% - 3rem);
+            .forms{
+                @include position(absolute,0,55%);
+                @include w-h(45%,100%);
+            }
+            .carousel{
+                @include position(absolute,0,0);
+                @include w-h(55%,100%);
+                background-color: $blue-tree;
+                border-radius: 2rem;
+                .content-carousel{
+                    margin-top: 5rem;
+                    .image-carousel{
+                        .imageC{
+                            @include w-h(100%,null);
+                        }
+                    }
+                    .text-carousel{
+                        margin-bottom: 10.3rem;
+                        text-align: center;
+                        h1{
+                            @include font(2.5rem,900,$blue-one);
+                            margin-bottom: 1rem
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

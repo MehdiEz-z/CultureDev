@@ -8,21 +8,20 @@
 @import "abstracts/variables";
 
 //Layouts
-@import "layouts/navbar";
+@import "layouts/main-LS";
 @import "layouts/sidebar";
 @import "layouts/main-dash";
 @import "layouts/right-dash";
-@import "layouts/login";
-@import "layouts/signup";
-@import "layouts/carousel";
+// @import "layouts/login";
 
 //Components
 @import "components/buttons";
 
 //Pages
+@import "pages/signup";
+@import "pages/login";
 @import "pages/dashboard";
 @import "pages/statistique";
-@import "pages/landing-page";
 
 //Themes
 

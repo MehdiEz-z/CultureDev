@@ -2,7 +2,6 @@ aside{
     @include w-h(null,100vh);
     .top{
         @include flex(flex,center,space-between,null);
-        background: $white;
         margin-top: 1.4rem;
         .logo{
             @include flex(flex,center,null,null);

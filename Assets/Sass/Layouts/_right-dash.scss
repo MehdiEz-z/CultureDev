@@ -25,7 +25,7 @@
             }
         }
         .profile{
-            display: flex;
+            @include flex(flex,center,center,null);
             gap: 1rem;
             text-align: right;
             .infos{
@@ -38,9 +38,8 @@
                 }
             }
             img{
-                width: 2rem;
+                width: 2.5rem;
                 border-radius: 50%;
-                margin-left: .5rem;
             }
         }
     }
@@ -94,8 +93,12 @@
         transition: 0.3s;
         cursor: pointer;
         &:hover{
-            background: $white;
+            background: $blue-one;
+            border: none;
             box-shadow: 0 1rem 3rem rgba(10, 10, 10, 0.12);
+            h3,i{
+                color: $white;
+            }
         }
         div{
             @include flex(flex,center,null,null);

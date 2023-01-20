@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once __DIR__.'/../model/user.php';
+require_once '../model/user.php';
 
 
 if(isset($_POST["signup"]))  Signup();
@@ -21,7 +21,7 @@ function Signup(){
     }else{
         $user->signup();
     }
-    header("Location:../../public/index.php");
+    header("Location:../view/index.php");
 
 } 
 
@@ -37,7 +37,7 @@ function Login(){
         $password_v = password_verify($_POST["password"],$result['password']);
         if($password_v == $_POST["password"]){
             $_SESSION['username'] = $result['username'];
-            header('location:dashboard.php');
+            header('location:../view/dashboard.php');
             die();
 
         }else{
@@ -47,7 +47,7 @@ function Login(){
         $_SESSION['errorLogin']= "Email incorrect";
     }
 
-    header('location: ../../public/index.php');
+    header('location: ../view/index.php');
 }
 
 

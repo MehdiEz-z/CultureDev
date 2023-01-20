@@ -1,22 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Meta Tags -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<?php
+$Title='Dashboard | CultureDev.to';
+require_once ('./includes/head.php');
 
-    <!-- Title & Icon -->
-    <title>Dashboard | CultureDev.to</title>
-    <link rel="icon" href="./Assets/Images/logo.png">
-
-    <!-- My Style -->
-    <link rel="stylesheet" href="./Assets/Css/mains.css">
-
-    <!-- Fontawesome link -->
-    <script src="https://kit.fontawesome.com/f57667c685.js" crossorigin="anonymous"></script>
-
-</head>
+?>
 <body class="dash">
     <div class="container">
 
@@ -26,7 +12,7 @@
             <div class="top">
                 <!-- Logo Sidebar -->
                 <div class="logo">
-                    <img src="./Assets/Images/logo.png" alt="CultureDevLogo">
+                    <img src="../Assets/Images/logo.png" alt="CultureDevLogo">
                     <h3>ulture<span>D</span>ev</h3>
                 </div>
                 <div class="close" id="close-btn">
@@ -103,7 +89,7 @@
                     </div>
                 </div>
             </div>
-        </main>
+          </main>
 
         <!-- Right Dashboard content -->
         <div class="right-dash">
@@ -124,7 +110,7 @@
                         <small>Admin</small>
                     </div>
                     <div class="photo-profile">
-                        <img src="./Assets/Images/user-1.jpg" alt="Photo de profile">
+                        <img src="../Assets/Images/user-1.jpg" alt="Photo de profile">
                     </div>
                 </div>
             </div>
@@ -134,7 +120,7 @@
                 <div class="posts">
                     <div class="post">
                         <div class="profile-photo">
-                            <img src="./Assets/Images/user-1.jpg" alt="Photo de profile">
+                            <img src="../Assets/Images/user-1.jpg" alt="Photo de profile">
                         </div>
                         <div class="post-infos">
                             <p><span class="username-post">Mehdi Ezzahri</span> a publié un post : <span class="title-post">Titre d'article posté</span></p>
@@ -143,7 +129,7 @@
                     </div>
                     <div class="post">
                         <div class="profile-photo">
-                            <img src="./Assets/Images/user-1.jpg" alt="Photo de profile">
+                            <img src="../Assets/Images/user-1.jpg" alt="Photo de profile">
                         </div>
                         <div class="post-infos">
                             <p><span class="username-post">Mehdi Ezzahri</span> a publié un post : <span class="title-post">Titre d'article posté</span></p>
@@ -152,7 +138,7 @@
                     </div>
                     <div class="post">
                         <div class="profile-photo">
-                            <img src="./Assets/Images/user-1.jpg" alt="Photo de profile">
+                            <img src="../Assets/Images/user-1.jpg" alt="Photo de profile">
                         </div>
                         <div class="post-infos">
                             <p><span class="username-post">Mehdi Ezzahri</span> a publié un post : <span class="title-post">Titre d'article posté</span></p>
@@ -161,7 +147,7 @@
                     </div>
                     <div class="post">
                         <div class="profile-photo">
-                            <img src="./Assets/Images/user-1.jpg" alt="Photo de profile">
+                            <img src="../Assets/Images/user-1.jpg" alt="Photo de profile">
                         </div>
                         <div class="post-infos">
                             <p><span class="username-post">Mehdi Ezzahri</span> a publié un post : <span class="title-post">Titre d'article posté</span></p>
@@ -170,7 +156,7 @@
                     </div>
                     <div class="post">
                         <div class="profile-photo">
-                            <img src="./Assets/Images/user-1.jpg" alt="Photo de profile">
+                            <img src="../Assets/Images/user-1.jpg" alt="Photo de profile">
                         </div>
                         <div class="post-infos">
                             <p><span class="username-post">Mehdi Ezzahri</span> a publié un post : <span class="title-post">Titre d'article posté</span></p>

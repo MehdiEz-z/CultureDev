@@ -1,11 +1,8 @@
-.login{
+.signup{
     @include flex(flex,null,space-evenly,column);
     @include w-h(100%,100%);
     max-width: 300px;
     margin: 0 auto;
-    grid-column: 1/2;
-    grid-row: 1/2;
-    transition: opacity 0.02s 0.4s;
     .logo{
         @include flex(flex,center,null,null);
         img{
@@ -37,7 +34,7 @@
             }
         }
     }
-    .errorLogin{
+    .errorSignup{
         @include flex(flex,center,center,null);
         @include w-h(100%,null);
         background-color: $errorBackg;
@@ -45,6 +42,13 @@
         color: $errorText;
     }
     .form-content{
+        .image-upl{
+            margin-bottom: 2rem;
+            background: none;
+            label{
+                @include font(.9rem,null,$grey);
+            }
+        }
         .inputs{
             position: relative;
             @include w-h(null,37px);
@@ -109,3 +113,4 @@
         }
     }
 }
+    
