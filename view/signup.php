@@ -11,7 +11,7 @@ require_once ('./includes/head.php');
             <div class="interior-box">
                 <div class="forms">
                     <!-- Sign-up Form -->
-                    <form action="../controller/user_controller.php" method="POST" class="signup">
+                    <form action="" method="POST" class="signup" enctype="multipart/form-data">
                         <!-- Logo Form-->
                         <div class="logo">
                             <img src="../Assets/Images/logo.png" alt="CultureDevLogo">
@@ -27,31 +27,37 @@ require_once ('./includes/head.php');
                         <div class="form-content">
                             <!-- Username Input -->
                             <div class="inputs">
-                                <input class="input-field" name="Susername" id="username" type="text">
-                                <label>Nom d'utilisateur</label>
-                                <span class="usernameErr1">Username is required</span>
-                                <span class="usernameErr2">Invalid username</span>
+                                <input class="input-field" name="Fname" id="fname" type="text">
+                                <label>Nom</label>
+                                <span class="fnameErr1">Nom obligatoir</span>
+                                <span class="fnameErr2">Nom invalide</span>
+                            </div>
+                            <div class="inputs">
+                                <input class="input-field" name="Lname" id="lname" type="text">
+                                <label>Prenom</label>
+                                <span class="lnameErr1">Prenom obligatoir</span>
+                                <span class="lnameErr2">Prenom invalide</span>
                             </div>
                             <!-- Email Input -->
                             <div class="inputs">
                                 <input class="input-field" name="Semail" id="Semail" type="text">
                                 <label>Email</label>
-                                <span class="SemailErr1">Email is required</span>
-                                <span class="SemailErr2">Invalid email address</span>
+                                <span class="SemailErr1">Adresse mail obligatoir</span>
+                                <span class="SemailErr2">Adresse mail invalide</span>
                             </div>
                             <!-- Password Input -->
                             <div class="inputs">
                                 <input class="input-field" name="Spassword" id="Spassword" type="password">
                                 <label>Mot de Passe</label>
-                                <span class="SpassErr1">Password is required</span>
-                                <span class="SpassErr2">Invalid password</span>
+                                <span class="SpassErr1">Mot de passe obligatoir</span>
+                                <span class="SpassErr2">Mot de passe invalide</span>
                             </div>
                             <div class="image-upl">
                                 <label>Selectioner une images</label>
-                                <input class="" name="img" id="img" type="file" >
+                                <input class="" name="img" id="img" type="file">
                             </div>
                             <!-- Signup Button -->
-                            <input type="submit" class="login-btn" id="inscriver" name="signup" value="Inscrivez-vous" >
+                            <input type="submit" class="continue-btn" name="signup" value="Inscrivez-vous" >
                         </div>
                     </form>
                 </div>
@@ -70,9 +76,6 @@ require_once ('./includes/head.php');
         </div>
     </main>
 </body>
-
-<?php
-require_once "./includes/footer.php";
-?>
-
+<script src="../Assets/Javascript/input-animation.js"></script>
+<script src="../Assets/Javascript/signup.js"></script>
 </html>

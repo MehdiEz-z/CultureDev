@@ -51,7 +51,7 @@
         }
         .inputs{
             position: relative;
-            @include w-h(null,37px);
+            @include w-h(null,37px);    
             margin-bottom: 2rem;
             .input-field{
                 position: absolute;

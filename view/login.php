@@ -29,18 +29,18 @@ require_once ('./includes/head.php');
                             <div class="inputs">
                                 <input class="input-field" name="email" id="email" type="text" >
                                 <label>Email</label>
-                                <span class="emailErr1">Email is required</span>
-                                <span class="emailErr2">Invalid email address</span>
+                                <span class="emailErr1">Adresse mail obligatoir</span>
+                                <span class="emailErr2">Adresse mail invalide</span>
                             </div>
                             <!-- Password Input -->
                             <div class="inputs">
                                 <input class="input-field" name="password" id="password" type="password" >
                                 <label>Mot de Passe</label>
-                                <span class="passErr1">Password is required</span>
-                                <span class="passErr2">Invalid password</span>
+                                <span class="passErr1">Mot de Passe obligatoir</span>
+                                <span class="passErr2">Mot de Passe invalide</span>
                             </div>
                             <!-- Login Button -->
-                            <input type="button" class="login-btn" id="connecter" name="login" value="Connectez-vous" >
+                            <input type="submit" class="continue-btn" name="login" value="Connectez-vous" >
                             <!-- Forgot Password -->
                             <p class="text">
                                 Vous avez oublié votre mot de passe?
@@ -64,8 +64,6 @@ require_once ('./includes/head.php');
         </div>
     </main>
 </body>
-
-<?php
-require_once "./includes/footer.php";
-?>
+<script src="../Assets/Javascript/input-animation.js"></script>
+<script src="../Assets/Javascript/login.js"></script>
 </html>
