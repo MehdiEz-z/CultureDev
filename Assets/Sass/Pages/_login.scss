@@ -34,7 +34,7 @@
             }
         }
     }
-    .errorSignup{
+    .errorLogin{
         @include flex(flex,center,center,null);
         @include w-h(100%,null);
         background-color: $errorBackg;

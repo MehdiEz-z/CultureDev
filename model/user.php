@@ -1,54 +1,79 @@
 <?php
-require_once __DIR__.'/connection.php';
+require_once 'connection.php';
 
 class User extends Connection
 {
     public $id;
-    public $username;
+    public $fname;
+    public $lname;  
     public $email;
     public $password;
+    public $image;
+    public $imagename;
+
 
     //=================================== setters ===================================//
     
-    public function setId($id): void
+    public function setUserId($id)
     {
         $this->id = $id;
     }
 
-    public function setUsertName($username): void
+    public function setFname($fname)
     {
-        $this->username = $username;
+        $this->fname = $fname;
     }
 
-    public function setEmail($email): void
+    public function setLname($lname)
+    {
+        $this->lname = $lname;
+    }
+
+    public function setEmail($email)
     {
         $this->email = $email;
     }
 
-    public function setPassword($password): void
+    public function setPassword($password)
     {
         $this->password = $password;
     }
 
+    public function setiImage($image)
+    {
+        $this->image = $image;
+    }
+    
+    public function setImageName($imagename)
+    {
+        $this->imagename = $imagename;
+    }   
+
 
     //=================================== methods ===================================//
 
-    public function signup(){
+    function signup(){
     
-        $stmt = $this->connect()->prepare("INSERT INTO user VALUES ( ?,?,?,?)");
-        $stmt->execute([NULL,$this->username,$this->email,$this->password]);
-
+        $stmt = $this->connect()->prepare("INSERT INTO users VALUES (NULL,?,?,?,?,?)");  
+        $stmt->execute([$this->fname,$this->lname,$this->email,$this->password,$this->image]);
+        move_uploaded_file($this->imagename, '../Assets/Images/Users/' .$this->image);
     }
 
-    public function login(){
-        $stmt = $this->connect()->prepare("SELECT * FROM user WHERE email=?");
-        $stmt->execute([$this->email]);
-        $user = $stmt->fetch();
+    function login(){
 
-        return $user;
+        $stmt = $this->connect()->prepare("SELECT * FROM users WHERE email= ?");
+        $stmt->execute([$this->email]);
+
+        return $stmt->fetch(); 
+    }
+
+    function getuser(){
+       
+        $stmt = $this->connect()->prepare("SELECT * FROM users WHERE id_user= ?");
+        $stmt->execute([$this->id]);
+
+        return $stmt->fetch();
     }
 }
-
-
 
 ?>

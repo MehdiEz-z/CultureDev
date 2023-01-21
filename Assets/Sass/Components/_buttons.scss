@@ -1,5 +1,5 @@
 //Boutton Login & Signup
-.continue-btn{
+.signup-btn{
     @include w-h(100%,45px);
     @include outline;
     @include font(0.8rem,null,$white);
@@ -11,4 +11,7 @@
     &:hover{
         background-color: $orange;
     }
+}
+.login-btn{
+    @extend .signup-btn;
 }

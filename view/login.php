@@ -1,8 +1,8 @@
 <?php
 
 $Title='Login | CultureDev.to';
-require_once ('./includes/head.php');
-
+require_once './includes/head.php';
+require_once '../controller/shared.php';
 ?>
 
 <body>
@@ -11,7 +11,7 @@ require_once ('./includes/head.php');
             <div class="interior-box">
                 <div class="forms">
                     <!-- Login Form -->
-                    <form action="../controller/user_controller.php" method="POST" class="login">
+                    <form action="" method="POST" class="login">
                         <!-- Logo Form-->
                         <div class="logo">
                             <img src="../Assets/Images/logo.png" alt="CultureDevLogo">
@@ -23,6 +23,9 @@ require_once ('./includes/head.php');
                             <h6>Vous n'avez pas encore de compte ?</h6>
                             <a href="signup.php" class="toggle" id="inscriver">Inscrivez-vous</a>
                         </div>
+                        <?php if(isset($_SESSION['errorLogin'])){ ?>         
+                            <span class="errorLogin"><?= $_SESSION['errorLogin'];?></span>             
+                        <?php  unset($_SESSION['errorLogin']); } ?>   
                         <!-- Content Form -->
                         <div class="form-content">
                             <!-- Email Input -->
@@ -40,7 +43,7 @@ require_once ('./includes/head.php');
                                 <span class="passErr2">Mot de Passe invalide</span>
                             </div>
                             <!-- Login Button -->
-                            <input type="submit" class="continue-btn" name="login" value="Connectez-vous" >
+                            <button class="login-btn" name="login" type="submit">Connectez-vous</button>
                             <!-- Forgot Password -->
                             <p class="text">
                                 Vous avez oublié votre mot de passe?

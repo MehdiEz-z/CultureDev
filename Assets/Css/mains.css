@@ -58,7 +58,7 @@
   width: 100%;
 }
 .users .box .interior-box .carousel .content-carousel .text-carousel {
-  margin-bottom: 10.3rem;
+  margin-bottom: 9.8rem;
   text-align: center;
 }
 .users .box .interior-box .carousel .content-carousel .text-carousel h1 {
@@ -389,7 +389,7 @@ aside .sidebar a:hover i {
   color: #16467D;
 }
 
-.continue-btn {
+.signup-btn, .login-btn {
   width: 100%;
   height: 45px;
   border: none;
@@ -402,7 +402,7 @@ aside .sidebar a:hover i {
   transition: 0.4s;
   border-radius: 0.4rem;
 }
-.continue-btn:hover {
+.signup-btn:hover, .login-btn:hover {
   background-color: #E38D25;
 }
 
@@ -460,6 +460,7 @@ aside .sidebar a:hover i {
   background-color: #f9dcda;
   padding: 0.8rem 0;
   color: #B94A48;
+  margin-bottom: 0.5rem;
 }
 .signup .form-content .image-upl {
   margin-bottom: 2rem;
@@ -591,7 +592,7 @@ aside .sidebar a:hover i {
 .login .head .toggle:hover {
   color: #149BB4;
 }
-.login .errorSignup {
+.login .errorLogin {
   display: flex;
   align-items: center;
   justify-content: center;

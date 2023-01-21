@@ -1,10 +1,10 @@
 <?php
 
 
-class Connection
+abstract class Connection
 {
     private string $localhost = "localhost";
-    private string $username = "root";
+    private string $username = "root";  
     private string $db_password = "";
     private string $db_name = "culturedev";
 

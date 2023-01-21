@@ -1,6 +1,9 @@
 <?php
 $Title='Dashboard | CultureDev.to';
-require_once ('./includes/head.php');
+require_once './includes/head.php';
+require_once '../controller/shared.php';
+
+if(!isset($_SESSION['user'])) header("Location:login.php");  
 
 ?>
 <body class="dash">
@@ -37,7 +40,7 @@ require_once ('./includes/head.php');
                     <i class="icon fa-solid fa-gear"></i>
                     <h3>Paramétre</h3>
                 </a>
-                <a href="#">
+                <a href="../controller/logout.php">
                     <i class="icon fa-solid fa-right-from-bracket"></i>
                     <h3>Déconnexion</h3>
                 </a>
@@ -106,11 +109,11 @@ require_once ('./includes/head.php');
                 <!-- Profile infos -->
                 <div class="profile">
                     <div class="infos">
-                        <p>Hey, <span>Mehdi Ezzahri</span></p>
+                        <p>Hey, <span><?php echo $_SESSION['fname'].' '.$_SESSION['lname'] ?></span></p>
                         <small>Admin</small>
                     </div>
                     <div class="photo-profile">
-                        <img src="../Assets/Images/user-1.jpg" alt="Photo de profile">
+                        <img src="../Assets/Images/Users/<?php echo $_SESSION['image'] ?>" alt="Photo de profile">
                     </div>
                 </div>
             </div>

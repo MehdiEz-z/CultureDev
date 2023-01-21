@@ -1,7 +1,8 @@
 <?php
 
 $Title='Signup | CultureDev.to';
-require_once ('./includes/head.php');
+require_once './includes/head.php';
+require_once '../controller/shared.php';
 
 ?>
 
@@ -23,6 +24,9 @@ require_once ('./includes/head.php');
                             <h6>Vous avez déjà un compte ?</h6>
                             <a href="login.php" class="toggle">Connectez-vous</a>
                         </div>
+                        <?php if(isset($_SESSION['errorSignup'])){ ?>         
+                            <span class="errorSignup"><?= $_SESSION['errorSignup'];?></span>             
+                        <?php  unset($_SESSION['errorSignup']); } ?>   
                         <!-- Content Form -->
                         <div class="form-content">
                             <!-- Username Input -->
@@ -54,10 +58,10 @@ require_once ('./includes/head.php');
                             </div>
                             <div class="image-upl">
                                 <label>Selectioner une images</label>
-                                <input class="" name="img" id="img" type="file">
+                                <input name="img" type="file">
                             </div>
                             <!-- Signup Button -->
-                            <input type="submit" class="continue-btn" name="signup" value="Inscrivez-vous" >
+                            <button class="signup-btn" name="signup" type="submit">Inscrivez-vous</button>
                         </div>
                     </form>
                 </div>

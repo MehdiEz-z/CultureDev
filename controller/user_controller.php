@@ -1,53 +1,65 @@
 <?php
-session_start();
 require_once '../model/user.php';
 
-
-if(isset($_POST["signup"]))  Signup();
-if(isset($_POST["login"]))  Login();
-
-
-function Signup(){
+  
+if(isset($_POST["signup"])) signUp();
+if(isset($_POST["login"])) logIn();
+// class userController extends User{
+    
+function signUp(){
     $user = new User();
 
-    $user->setUsertName($_POST["Susername"]);
+    $user->setFname($_POST["Fname"]);
+    $user->setLname($_POST["Lname"]);
     $user->setEmail($_POST["Semail"]);
     $user->setPassword(password_hash($_POST['Spassword'],PASSWORD_BCRYPT));
+    $user->setImageName($_FILES['img']['tmp_name']);
+    $user->setiImage(uniqid().'_'.$_FILES['img']['name']); 
+    
+    if(empty($user->image)) $user->setiImage('User.jpg');
+    else{
+        
+    }
 
     $result = $user->login();
-    
+
     if($result){
-        $_SESSION['errorSignup'] = 'Cet utilisateur exist deja'; 
+        $_SESSION['errorSignup'] = 'Cet utilisateur exist déjà'; 
     }else{
         $user->signup();
-    }
-    header("Location:../view/index.php");
+        header("Location:../view/login.php");  
+    }          
+}
 
-} 
-
-function Login(){
+function logIn(){
     $user = new User();
-    
+
     $user->setEmail($_POST["email"]);
     $user->setPassword($_POST["password"]);
 
     $result = $user->login();
+
     if($result){
-        $_SESSION['email'] = $result['email'];
+        $_SESSION['user']   = $result['id_user'];
+        $_SESSION['fname']  = $result['fname'];
+        $_SESSION['lname']  = $result['lname'];
+        $_SESSION['image']  = $result['image'];
         $password_v = password_verify($_POST["password"],$result['password']);
         if($password_v == $_POST["password"]){
-            $_SESSION['username'] = $result['username'];
             header('location:../view/dashboard.php');
-            die();
-
         }else{
             $_SESSION['errorLogin']= 'Mot de passe incorect';    
         }
     }else{
         $_SESSION['errorLogin']= "Email incorrect";
     }
+}
 
-    header('location: ../view/index.php');
+function displayUser(){
+    $user = new User();
+
+    $user->setUserId($_SESSION['user']);
+    return $this->getuser();
 }
 
 
