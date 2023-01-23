@@ -728,6 +728,6 @@ aside .sidebar a:hover i {
   display: grid;
   grid-template-columns: 14rem auto 18rem;
   width: 96%;
-  margin: 0 auto;
+  margin: 0 auto !important;
   gap: 1.8rem;
 }

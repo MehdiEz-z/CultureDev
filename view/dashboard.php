@@ -56,6 +56,7 @@ require_once './includes/sidebar.php';
             <!-- Tableau d'affichage  des Articles-->
             <div class="articles">
                 <h2>Articles</h2>
+                <div class="tableContent">
                 <table id="articles-table">
                     <thead>
                         <tr>
@@ -85,6 +86,7 @@ require_once './includes/sidebar.php';
                         <?php }?>
                     </tbody>
                 </table>
+                </div>
             </div>
         </main>
         <!-- Right Dashboard content -->
