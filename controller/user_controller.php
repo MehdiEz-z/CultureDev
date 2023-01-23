@@ -55,12 +55,12 @@ function logIn(){
     }
 }
 
-function displayUser(){
-    $user = new User();
+// function displayUser(){
+//     $user = new User();
 
-    $user->setUserId($_SESSION['user']);
-    return $this->getuser();
-}
+//     $user->setUserId($_SESSION['user']);
+//     return $this->getuser();
+// }
 
 
 ?>

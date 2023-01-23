@@ -1,4 +1,4 @@
-//Boutton Login & Signup
+//Boutton Signup
 .signup-btn{
     @include w-h(100%,45px);
     @include outline;
@@ -12,6 +12,8 @@
         background-color: $orange;
     }
 }
+//Boutton Login
 .login-btn{
     @extend .signup-btn;
 }
+

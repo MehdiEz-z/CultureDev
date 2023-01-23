@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 * {
   padding: 0;
@@ -230,6 +231,42 @@ aside .sidebar a:hover i {
   font-weight: 900;
   color: #E38D25;
 }
+.dashbd .articles {
+  margin-top: 2rem;
+}
+.dashbd .articles h2 {
+  font-size: 1.6rem;
+  color: #403f3f;
+  margin-bottom: 0.8rem;
+}
+.dashbd .articles table {
+  width: 100%;
+  text-align: center;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border-bottom: 5px solid #16467D;
+  margin-top: 1rem;
+  box-shadow: 0 1rem 3rem rgba(10, 10, 10, 0.12);
+  transition: 0.4s;
+}
+.dashbd .articles table:hover {
+  box-shadow: none;
+}
+.dashbd .articles table tbody td {
+  border-bottom: 2px solid #f6f4f4;
+  height: 2.8rem;
+  font-size: 1rem;
+  color: #bbb;
+}
+.dashbd .articles table tbody td .actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dashbd .articles table tbody tr:last-child td {
+  border: none;
+}
 
 .right-dash {
   margin-top: 1.4rem;
@@ -294,99 +331,97 @@ aside .sidebar a:hover i {
   width: 2.5rem;
   border-radius: 50%;
 }
-.right-dash .recent-posts {
+.right-dash .catégories {
   margin-top: 1.4rem;
 }
-.right-dash .recent-posts h2 {
-  margin-bottom: 0.8rem;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #403f3f;
+.right-dash .catégories h2 {
+  margin-bottom: 1rem;
 }
-.right-dash .recent-posts .posts {
+.right-dash .catégories .category {
   background: white;
   padding: 1.5rem;
   border-radius: 0.5rem;
   border-bottom: 5px solid #B3E0E1;
-  margin-top: 1rem;
+  margin-top: 0.3rem;
   box-shadow: 0 1rem 3rem rgba(10, 10, 10, 0.12);
   transition: 0.4s;
+  position: relative;
 }
-.right-dash .recent-posts .posts:hover {
+.right-dash .catégories .category:hover {
   box-shadow: none;
+  border-bottom-color: #B94A48;
 }
-.right-dash .recent-posts .posts .post {
-  display: grid;
-  grid-template-columns: 2.6rem auto;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+.right-dash .catégories .category:hover .delete-cat {
+  visibility: visible;
 }
-.right-dash .recent-posts .posts .post:last-child {
-  margin-bottom: 0;
-}
-.right-dash .recent-posts .posts .post img {
-  width: 2rem;
-  border-radius: 50%;
-  margin-left: 0.5rem;
-}
-.right-dash .recent-posts .posts .post .post-infos {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.right-dash .recent-posts .posts .post .post-infos p {
-  font-size: 0.8rem;
-  font-weight: 500;
+.right-dash .catégories .category p {
+  font-size: 1.2rem;
+  font-weight: 600;
   color: #403f3f;
 }
-.right-dash .recent-posts .posts .post .post-infos p .username-post {
-  font-size: 0.8rem;
-  font-weight: 900;
+.right-dash .catégories .category p span {
+  font-size: 1.2rem;
+  font-weight: 700;
   color: #16467D;
 }
-.right-dash .recent-posts .posts .post .post-infos p .title-post {
-  font-size: 0.8rem;
-  font-weight: 900;
-  color: #403f3f;
+.right-dash .catégories .category .delete-cat {
+  visibility: hidden;
+  position: absolute;
+  top: 7%;
+  left: 94%;
+  color: #B94A48;
 }
-.right-dash .recent-posts .posts .post .post-infos small {
-  font-size: 0.7rem;
-  font-weight: 400;
-  color: #403f3f;
-}
-.right-dash .add-categorie {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1.5rem;
+.right-dash form .add-categorie {
+  margin: 1.5rem 0 2.5rem 0;
   border-radius: 0.8rem;
-  padding: 2rem;
+  padding: 1rem;
   background: transparent;
   border: 2px dashed #16467D;
   transition: 0.3s;
   cursor: pointer;
 }
-.right-dash .add-categorie:hover {
-  background: #16467D;
-  border: none;
+.right-dash form .add-categorie:hover {
+  background: white;
   box-shadow: 0 1rem 3rem rgba(10, 10, 10, 0.12);
 }
-.right-dash .add-categorie:hover h3, .right-dash .add-categorie:hover i {
-  color: white;
-}
-.right-dash .add-categorie div {
+.right-dash form .add-categorie a {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-}
-.right-dash .add-categorie div h3 {
-  font-size: 1rem;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #16467D;
+  text-decoration: none;
 }
-.right-dash .add-categorie div i {
-  font-size: 1.2rem;
+.right-dash form .add-categorie a i {
+  font-size: 1rem;
   color: #16467D;
+}
+.right-dash form .formContent {
+  position: relative;
+  height: 37px;
+}
+.right-dash form .formContent .input-categorie {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-radius: 0.5rem;
+  background: white;
+  text-indent: 1rem;
+  font-size: 0.9rem;
+  color: #403f3f;
+}
+.right-dash form .formContent label {
+  position: absolute;
+  top: -55%;
+  left: 5%;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #403f3f;
+  pointer-events: none;
 }
 
 .signup-btn, .login-btn {

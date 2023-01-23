@@ -43,72 +43,80 @@
             }
         }
     }
-    .recent-posts{
+    .catégories{
         margin-top: 1.4rem;
         h2{
-            margin-bottom: .8rem;
-            @include font(1.5rem,700,$black);
+            margin-bottom: 1rem;
         }
-        .posts{
-            @include card($blue-tree);
-            .post{
-                @include grid(grid,2.6rem auto,null);
-                gap: 1rem;
-                margin-bottom: 1.5rem;
-                &:last-child{
-                    margin-bottom: 0;
+        .category{
+            background: $white;
+            padding: 1.5rem;
+            border-radius: .5rem;
+            border-bottom: 5px solid $blue-tree;
+            margin-top: .3rem;
+            box-shadow: 0 1rem 3rem rgba(10, 10, 10, 0.12);
+            transition: .4s;
+            position: relative;
+            &:hover{
+                box-shadow: none;
+                border-bottom-color: $errorText;
+                .delete-cat{
+                    visibility: visible;
                 }
-                img{
-                    width: 2rem;
-                    border-radius: 50%;
-                    margin-left: .5rem;
-                }
-                .post-infos{
-                        overflow: hidden;
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                    p{
-                        @include font(.8rem,500,$black);
-                        .username-post{
-                            @include font(.8rem,900,$blue-one); 
-                        }
-                        .title-post{
-                            @include font(.8rem,900,$black);
-                        }
-                    }
-                    small{
-                        @include font(.7rem,400,$black);
-                    }
-                }
+            }
+            p{
+                @include font(1.2rem,600,$black);
+                span{
+                    @include font(1.2rem,700,$blue-one);
+                }   
+            }
+            .delete-cat{
+                visibility: hidden;
+                @include position(absolute,7%,94%);
+                color: $errorText;
             }
         }
     }
-    .add-categorie{
-        @include flex(flex,center,center,null);
-        margin-top: 1.5rem;
-        border-radius: .8rem;
-        padding: 2rem;
-        background: transparent;
-        border: 2px dashed $blue-one;
-        transition: 0.3s;
-        cursor: pointer;
-        &:hover{
-            background: $blue-one;
-            border: none;
-            box-shadow: 0 1rem 3rem rgba(10, 10, 10, 0.12);
-            h3,i{
-                color: $white;
+    form{
+        .add-categorie{
+            margin: 1.5rem 0 2.5rem 0;
+            border-radius: .8rem;
+            padding: 1rem;
+            background: transparent;
+            border: 2px dashed $blue-one;
+            transition: 0.3s;
+            cursor: pointer;
+            &:hover{
+                background: $white;
+                box-shadow: 0 1rem 3rem rgba(10, 10, 10, 0.12);
+            }
+            a{
+                @include flex(flex,center,center,null);
+                gap: 1rem;
+                @include font(1.2rem,700,$blue-one);
+                text-decoration: none;
+                i{
+                    @include font(1rem,null,$blue-one); 
+                }
             }
         }
-        div{
-            @include flex(flex,center,null,null);
-            gap: .6rem;
-            h3{
-                @include font(1rem,700,$blue-one);
+        .formContent{
+            position: relative;
+            @include w-h(null,37px);
+            .input-categorie{
+                position: absolute;
+                @include w-h(100%,100%);
+                @include outline;
+                border-radius: .5rem;
+                background: $white;
+                text-indent: 1rem;
+                @include font(.9rem,null,$black);
             }
-            i{
-                @include font(1.2rem,null,$blue-one); 
+            label{
+                @include position(absolute,-55%,5%);
+                @include font(.9rem,500,$black);
+                pointer-events: none;
             }
-        }
+        }    
     }
 }

@@ -3,50 +3,11 @@ $Title='Dashboard | CultureDev.to';
 require_once './includes/head.php';
 require_once '../controller/shared.php';
 
-if(!isset($_SESSION['user'])) header("Location:login.php");  
+if(!isset($_SESSION['user'])) header("Location:login.php");
+
+require_once './includes/sidebar.php';
 
 ?>
-<body class="dash">
-    <div class="container">
-
-        <!-- Sidebar -->
-        <aside>
-            <!-- Top Sidebar -->
-            <div class="top">
-                <!-- Logo Sidebar -->
-                <div class="logo">
-                    <img src="../Assets/Images/logo.png" alt="CultureDevLogo">
-                    <h3>ulture<span>D</span>ev</h3>
-                </div>
-                <div class="close" id="close-btn">
-                    <i class="fa-solid fa-xmark"></i>
-                </div>
-            </div>
-            <!-- Sidebar Content -->
-            <div class="sidebar">
-                <a href="#" class="active">
-                    <i class="icon fa-brands fa-slack"></i>
-                    <h3>Dashboard</h3>
-                </a>
-                <a href="#">
-                    <i class="fa-solid fa-plus"></i>
-                    <h3>Add Post</h3>
-                </a>
-                <a href="#">
-                    <i class="icon fa-solid fa-user"></i>
-                    <h3>Profile</h3>
-                </a>
-                <a href="#">
-                    <i class="icon fa-solid fa-gear"></i>
-                    <h3>Paramétre</h3>
-                </a>
-                <a href="../controller/logout.php">
-                    <i class="icon fa-solid fa-right-from-bracket"></i>
-                    <h3>Déconnexion</h3>
-                </a>
-            </div>
-        </aside>
-
         <!-- Main Content -->
         <main class="dashbd">
             <div class="top-main">
@@ -92,8 +53,50 @@ if(!isset($_SESSION['user'])) header("Location:login.php");
                     </div>
                 </div>
             </div>
-          </main>
-
+            <!-- Tableau d'affichage  des Articles-->
+            <div class="articles">
+                <h2>Articles</h2>
+                <table id="articles-table">
+                    <thead>
+                        <tr>
+                            <th>Auteurs</th>
+                            <th>Titres</th>
+                            <th>Categories</th>
+                            <th>Description</th>
+                            <th>Date</th>
+                            <th>Cover</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mehdi</td>
+                            <td>Article number 222</td>
+                            <td>FrontEnd</td>
+                            <td>ddddddddddddddddddddddddddddddddddddddddd</td>
+                            <td>22/12/2022</td>
+                            <td>image</td>
+                            <td class="actions">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                                <i class="fa-solid fa-trash-can"></i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>yasser</td>
+                            <td>Article number 222</td>
+                            <td>FrontEnd</td>
+                            <td>ddddddddddddddddddddddddddddddddddddddddd</td>
+                            <td>22/12/2022</td>
+                            <td>image</td>
+                            <td class="actions">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                                <i class="fa-solid fa-trash-can"></i>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
         <!-- Right Dashboard content -->
         <div class="right-dash">
             <!-- Top Right Dashboard -->
@@ -118,63 +121,33 @@ if(!isset($_SESSION['user'])) header("Location:login.php");
                 </div>
             </div>
             <!-- Recents Posts -->
-            <div class="recent-posts">
-                <h2>Articles Récents</h2>
-                <div class="posts">
-                    <div class="post">
-                        <div class="profile-photo">
-                            <img src="../Assets/Images/user-1.jpg" alt="Photo de profile">
-                        </div>
-                        <div class="post-infos">
-                            <p><span class="username-post">Mehdi Ezzahri</span> a publié un post : <span class="title-post">Titre d'article posté</span></p>
-                            <small>Il y a 2 minutes</small>
-                        </div>
+            <div class="catégories">
+                <h2>Catégories</h2>
+                <div class="category">
+                    <div class="category-infos">
+                        <p><span class="username-category">Categorie : </span>FrontEnd</p>
                     </div>
-                    <div class="post">
-                        <div class="profile-photo">
-                            <img src="../Assets/Images/user-1.jpg" alt="Photo de profile">
-                        </div>
-                        <div class="post-infos">
-                            <p><span class="username-post">Mehdi Ezzahri</span> a publié un post : <span class="title-post">Titre d'article posté</span></p>
-                            <small>Il y a 2 minutes</small>
-                        </div>
+                    <a href=""><i class="delete-cat fa-solid fa-xmark "></i></a>
+                </div>
+                <div class="category">
+                    <div class="category-infos">
+                        <p><span class="username-category">Categorie : </span>BackEnd</p>
                     </div>
-                    <div class="post">
-                        <div class="profile-photo">
-                            <img src="../Assets/Images/user-1.jpg" alt="Photo de profile">
-                        </div>
-                        <div class="post-infos">
-                            <p><span class="username-post">Mehdi Ezzahri</span> a publié un post : <span class="title-post">Titre d'article posté</span></p>
-                            <small>Il y a 2 minutes</small>
-                        </div>
-                    </div>
-                    <div class="post">
-                        <div class="profile-photo">
-                            <img src="../Assets/Images/user-1.jpg" alt="Photo de profile">
-                        </div>
-                        <div class="post-infos">
-                            <p><span class="username-post">Mehdi Ezzahri</span> a publié un post : <span class="title-post">Titre d'article posté</span></p>
-                            <small>Il y a 2 minutes</small>
-                        </div>
-                    </div>
-                    <div class="post">
-                        <div class="profile-photo">
-                            <img src="../Assets/Images/user-1.jpg" alt="Photo de profile">
-                        </div>
-                        <div class="post-infos">
-                            <p><span class="username-post">Mehdi Ezzahri</span> a publié un post : <span class="title-post">Titre d'article posté</span></p>
-                            <small>Il y a 2 minutes</small>
-                        </div>
-                    </div>
+                    <a href=""><i class="delete-cat fa-solid fa-xmark "></i></a>
                 </div>
             </div>
-            <!-- Button add Categories -->
-            <div class="add-categorie">
-                <div>
-                    <i class="fa-solid fa-plus"></i>
-                    <h3>Ajouter une catégorie</h3>
+            <form action="" methode="POST" class="formCategory">
+                <!-- Button add Categories -->  
+                <div class="add-categorie">
+                    <a href=""><i class="fa-solid fa-plus" name ="saveCategory"></i>Ajouter une catégorie</a> 
                 </div>
-            </div>
+                <div class="formContent">
+                    <input class="input-categorie" name="name-categorie" id="add-categorie" type="text" >
+                    <label>Nom du catégorie</label>
+                </div>
+            </form>
         </div>
     </div>
 </body>
+<script src="../Assets/Javascript/datatable.js"></script>
+</html>

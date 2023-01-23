@@ -54,5 +54,35 @@
             }
         }
     }
+    .articles{
+        margin-top: 2rem;
+        h2{
+            @include font(1.6rem,null,$black);
+            margin-bottom: .8rem;
+        }
+        table{
+            @include w-h(100%,null);
+            text-align: center;
+            @include card($blue-one);
+            tbody{
+                td{
+                    border-bottom: 2px solid #f6f4f4;
+                    height: 2.8rem;
+                    @include font(1rem,null,$grey);
+                    .actions{
+                        @include flex(flex,center,center,null);
+                    }
+                }
+                tr{
+                    &:last-child{
+                        td{
+                            border: none;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
     
 }
