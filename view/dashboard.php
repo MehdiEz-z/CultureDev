@@ -56,36 +56,45 @@ require_once './includes/sidebar.php';
             <!-- Tableau d'affichage  des Articles-->
             <div class="articles">
                 <h2>Articles</h2>
-                <div class="tableContent">
-                <table id="articles-table">
-                    <thead>
-                        <tr>
-                            <th>Auteurs</th>
-                            <th>Titres</th>
-                            <th>Categories</th>
-                            <th>Description</th>
-                            <th>Date</th>
-                            <th>Cover</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach(getArticles() as $article){ ?>
-                        <tr>
-                            <td><?= $article['fname'];?></td>
-                            <td><?= $article['titre'];?></td>
-                            <td><?= $article['name'];?></td>
-                            <td><?= $article['description'];?></td>
-                            <td><?= $article['date'];?></td>
-                            <td><img src="../Assets/Images/illustration.png" alt=""></td>
-                            <td class="actions">
-                                <a href=""><i class="fa-solid fa-pen-to-square btnUpdate"></i></a>
-                                <a href=""><i class="fa-solid fa-trash-can btnDelete"></i></a>
-                            </td>
-                        </tr>
-                        <?php }?>
-                    </tbody>
-                </table>
+                <div class="table-head">
+                    <div class="searchTable">
+                        <input type="text">
+                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div> 
+                    <button type="submit" name ="addArticle" class="addArticles"><i class="fa-solid fa-plus"></i>Ajouter un article</button>
+                </div>
+                <div class="articleTable">
+                    <div class="tableContent">
+                        <table id="articles-table">
+                            <thead>
+                                <tr>
+                                    <th>Auteurs</th>
+                                    <th>Titres</th>
+                                    <th>Categories</th>
+                                    <th>Description</th>
+                                    <th>Date</th>
+                                    <th>Cover</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach(getArticles() as $article){ ?>
+                                <tr>
+                                    <td><?= $article['fname'];?></td>
+                                    <td><?= $article['titre'];?></td>
+                                    <td><?= $article['name'];?></td>
+                                    <td><?= $article['description'];?></td>
+                                    <td><?= $article['date'];?></td>
+                                    <td><img src="../Assets/Images/illustration.png" alt=""></td>
+                                    <td class="actions">
+                                        <a href=""><i class="fa-solid fa-pen-to-square btnUpdate"></i></a>
+                                        <a href=""><i class="fa-solid fa-trash-can btnDelete"></i></a>
+                                    </td>
+                                </tr>
+                                <?php }?>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </main>

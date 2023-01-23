@@ -5,31 +5,6 @@
         h1{
             @include font(2.5rem,900,$black);
         }
-        .search{
-            @include flex(flex,center,space-between,null);
-            background-color: $white;
-            border-radius: 50px;
-            width: 26rem;
-            padding: 5px;
-            margin-left: 1rem;
-            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.12);
-            input{
-                @include outline;
-                background-color: transparent;
-                text-indent: 1rem;
-                width: 85%;
-            }
-            button{
-                @include flex(flex,center,center,null);
-                @include outline;
-                cursor: pointer;
-                border-radius: 50%;
-                background-color: $white;
-                color: $blue-one;
-                padding: .2rem;
-                margin-right: .3rem;
-            }
-        }
     }
     .statistiques{
         @include grid(grid,repeat(3, 1fr),null);
@@ -60,31 +35,62 @@
             @include font(1.6rem,null,$black);
             margin-bottom: .8rem;
         }
-        table{
-            @include w-h(100%,null);
-            text-align: center;
+        .table-head{
+            @include flex(flex,center,space-between,null);
+            .addArticles{
+                width: 15%;
+                border-radius: .8rem;
+                padding: .5rem;
+                background: $white;
+                border: 1px solid $blue-one;
+                transition: 0.3s;
+                cursor: pointer;
+                @include flex(flex,center,center,null);
+                gap: 1rem;
+                @include font(.8rem,700,$blue-one);
+                text-decoration: none;
+                i{
+                    @include font(.8rem,null,$blue-one); 
+                }
+                &:hover{
+                    background: $blue-one;
+                    color: $white;
+                    box-shadow: 0 1rem 3rem rgba(10, 10, 10, 0.12);
+                    border: 1px solid $white;
+                    i{
+                        color: $white
+                    }
+                }
+            }
+        }
+        .articleTable{
             @include card($blue-one);
-            tbody{
-                img{
-                    width: 5rem;
-                }
-                td{
-                    border-bottom: 2px solid #f6f4f4;
-                    height: 2.8rem;
-                    padding: 10px;
-                    min-width: 50px;
-                    @include font(1rem,null,$grey);
-                }
-                tr{
-                    &:last-child{
-                        td{
-                            border: none;
+            border-top: 5px solid $blue-one;
+            overflow-y: auto;
+            @include w-h(100%,350px);
+            table{
+                width: 100%;
+                text-align: center;
+                tbody{
+                    img{
+                        width: 5rem;
+                    }
+                    td{
+                        border-bottom: 2px solid #f6f4f4;
+                        height: 2.8rem;
+                        padding: 10px 10px 0px 10px;
+                        min-width: 50px;
+                        @include font(1rem,null,$grey);
+                    }
+                    tr{
+                        &:last-child{
+                            td{
+                                border: none;
+                            }
                         }
                     }
                 }
-                
             }
         }
     }
-    
 }

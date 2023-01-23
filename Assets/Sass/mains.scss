@@ -5,7 +5,7 @@
 //Abstracts
 @import "abstracts/colors";
 @import "abstracts/mixins";
-@import "abstracts/variables";
+@import "abstracts/scrollbar";
 
 //Layouts
 @import "layouts/main-LS";
@@ -16,6 +16,7 @@
 
 //Components
 @import "components/buttons";
+@import "components/searchBtn";
 
 //Pages
 @import "pages/signup";

@@ -1,0 +1,27 @@
+.search{
+    @include flex(flex,center,space-between,null);
+    background-color: $white;
+    border-radius: 50px;
+    width: 50%;
+    padding: 5px;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.12);
+    input{
+        @include outline;
+        background-color: transparent;
+        text-indent: 1rem;
+        width: 85%;
+    }
+    button{
+        @include flex(flex,center,center,null);
+        @include outline;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: $white;
+        color: $blue-one;
+        padding: .2rem;
+        margin-right: .3rem;
+    }
+}
+.searchTable{
+    @extend .search;
+}

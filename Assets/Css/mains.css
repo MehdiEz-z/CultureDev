@@ -5,7 +5,19 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  background-color: #16467D;
 }
 
 .users {
@@ -157,37 +169,6 @@ aside .sidebar a:hover i {
   font-weight: 900;
   color: #403f3f;
 }
-.dashbd .top-main .search {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: white;
-  border-radius: 50px;
-  width: 26rem;
-  padding: 5px;
-  margin-left: 1rem;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.12);
-}
-.dashbd .top-main .search input {
-  border: none;
-  outline: none;
-  background-color: transparent;
-  text-indent: 1rem;
-  width: 85%;
-}
-.dashbd .top-main .search button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  border-radius: 50%;
-  background-color: white;
-  color: #16467D;
-  padding: 0.2rem;
-  margin-right: 0.3rem;
-}
 .dashbd .statistiques {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -236,9 +217,42 @@ aside .sidebar a:hover i {
   color: #403f3f;
   margin-bottom: 0.8rem;
 }
-.dashbd .articles table {
-  width: 100%;
-  text-align: center;
+.dashbd .articles .table-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dashbd .articles .table-head .addArticles {
+  width: 15%;
+  border-radius: 0.8rem;
+  padding: 0.5rem;
+  background: white;
+  border: 1px solid #16467D;
+  transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #16467D;
+  text-decoration: none;
+}
+.dashbd .articles .table-head .addArticles i {
+  font-size: 0.8rem;
+  color: #16467D;
+}
+.dashbd .articles .table-head .addArticles:hover {
+  background: #16467D;
+  color: white;
+  box-shadow: 0 1rem 3rem rgba(10, 10, 10, 0.12);
+  border: 1px solid white;
+}
+.dashbd .articles .table-head .addArticles:hover i {
+  color: white;
+}
+.dashbd .articles .articleTable {
   background: white;
   padding: 1.5rem;
   border-radius: 0.5rem;
@@ -246,22 +260,30 @@ aside .sidebar a:hover i {
   margin-top: 1rem;
   box-shadow: 0 1rem 3rem rgba(10, 10, 10, 0.12);
   transition: 0.4s;
+  border-top: 5px solid #16467D;
+  overflow-y: auto;
+  width: 100%;
+  height: 350px;
 }
-.dashbd .articles table:hover {
+.dashbd .articles .articleTable:hover {
   box-shadow: none;
 }
-.dashbd .articles table tbody img {
+.dashbd .articles .articleTable table {
+  width: 100%;
+  text-align: center;
+}
+.dashbd .articles .articleTable table tbody img {
   width: 5rem;
 }
-.dashbd .articles table tbody td {
+.dashbd .articles .articleTable table tbody td {
   border-bottom: 2px solid #f6f4f4;
   height: 2.8rem;
-  padding: 10px;
+  padding: 10px 10px 0px 10px;
   min-width: 50px;
   font-size: 1rem;
   color: #bbb;
 }
-.dashbd .articles table tbody tr:last-child td {
+.dashbd .articles .articleTable table tbody tr:last-child td {
   border: none;
 }
 
@@ -391,7 +413,7 @@ aside .sidebar a:hover i {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #16467D;
   text-decoration: none;
@@ -445,6 +467,37 @@ aside .sidebar a:hover i {
 }
 .signup-btn:hover, .login-btn:hover {
   background-color: #E38D25;
+}
+
+.search, .searchTable {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 50px;
+  width: 50%;
+  padding: 5px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.12);
+}
+.search input, .searchTable input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  text-indent: 1rem;
+  width: 85%;
+}
+.search button, .searchTable button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: white;
+  color: #16467D;
+  padding: 0.2rem;
+  margin-right: 0.3rem;
 }
 
 .signup {
