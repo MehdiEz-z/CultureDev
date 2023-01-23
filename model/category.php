@@ -44,4 +44,12 @@ class Categories extends Connection
         $stmt = $this->connect()->prepare("DELETE FROM category WHERE category_id=?");
         $stmt->execute([$this->id]);
     }
+
+    function countcategorie(){
+   
+        $stmt = $this->connect()->prepare("SELECT * FROM category");
+        $stmt->execute();
+
+        return $stmt->rowCount();
+    }
 }

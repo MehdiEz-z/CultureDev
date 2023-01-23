@@ -26,7 +26,7 @@ require_once './includes/sidebar.php';
                         <div class="express">
                             <h3>Total Articles</h3></div>
                         <div class="count">
-                            <h1>25</h1>
+                            <h1><?= $countCategorie ?></h1>
                         </div>
                     </div>
                 </div>
@@ -37,7 +37,7 @@ require_once './includes/sidebar.php';
                         <div class="express">
                             <h3>Total Catégories</h3></div>
                         <div class="count">
-                            <h1>25</h1>
+                            <h1><?= $countCategorie ?></h1>
                         </div>
                     </div>
                 </div>
@@ -48,7 +48,7 @@ require_once './includes/sidebar.php';
                         <div class="express">
                             <h3>Total Admins</h3></div>
                         <div class="count">
-                            <h1>25</h1>
+                            <h1><?= $countCategorie ?></h1>
                         </div>
                     </div>
                 </div>
@@ -77,8 +77,8 @@ require_once './includes/sidebar.php';
                             <td>22/12/2022</td>
                             <td>image</td>
                             <td class="actions">
-                                <i class="fa-solid fa-pen-to-square"></i>
-                                <i class="fa-solid fa-trash-can"></i>
+                                <a href=""><i class="fa-solid fa-pen-to-square btnUpda"></i></a>
+                                <a href=""><i class="fa-solid fa-trash-can btnDelete"></i></a>
                             </td>
                         </tr>
                         <tr>
@@ -89,8 +89,8 @@ require_once './includes/sidebar.php';
                             <td>22/12/2022</td>
                             <td>image</td>
                             <td class="actions">
-                                <i class="fa-solid fa-pen-to-square"></i>
-                                <i class="fa-solid fa-trash-can"></i>
+                                <a href=""><i class="fa-solid fa-pen-to-square"></i></a>
+                                <a href=""><i class="fa-solid fa-trash-can"></i></a>
                             </td>
                         </tr>
                     </tbody>
@@ -123,23 +123,23 @@ require_once './includes/sidebar.php';
             <!-- Recents Posts -->
             <div class="catégories">
                 <h2>Catégories</h2>
-                <div class="category">
-                    <div class="category-infos">
-                        <p><span class="username-category">Categorie : </span>FrontEnd</p>
-                    </div>
-                    <a href=""><i class="delete-cat fa-solid fa-xmark "></i></a>
-                </div>
-                <div class="category">
-                    <div class="category-infos">
-                        <p><span class="username-category">Categorie : </span>BackEnd</p>
-                    </div>
-                    <a href=""><i class="delete-cat fa-solid fa-xmark "></i></a>
-                </div>
+                <?php
+                foreach(getCategories() as $category){ ?>
+                    <div class="category">
+                            <div class="category-infos">
+                                <p><span class="username-category">Categorie : </span><?= $category['name'] ?></p>
+                            </div>
+                            <a href="dashboard.php?cat_id=<?= $category['category_id'] ?>"><i class="delete-cat fa-solid fa-xmark "></i></a>
+                            </div>
+             <?php   }?>
             </div>
-            <form action="" methode="POST" class="formCategory">
+            <form action="" method="POST" class="formCategory">
+                <?php if(isset($_SESSION['errorCategory'])){ ?>         
+                    <span class="errorCategory"><?= $_SESSION['errorCategory'];?></span>             
+                <?php } unset($_SESSION['errorCategory']); ?>  
                 <!-- Button add Categories -->  
                 <div class="add-categorie">
-                    <a href=""><i class="fa-solid fa-plus" name ="saveCategory"></i>Ajouter une catégorie</a> 
+                    <button type="submit" name ="saveCategory"><i class="fa-solid fa-plus"></i>Ajouter une catégorie</button>
                 </div>
                 <div class="formContent">
                     <input class="input-categorie" name="name-categorie" id="add-categorie" type="text" >
@@ -149,5 +149,4 @@ require_once './includes/sidebar.php';
         </div>
     </div>
 </body>
-<script src="../Assets/Javascript/datatable.js"></script>
 </html>

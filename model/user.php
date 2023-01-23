@@ -50,6 +50,7 @@ class User extends Connection
     }   
 
 
+
     //=================================== methods ===================================//
 
     function signup(){

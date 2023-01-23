@@ -77,26 +77,37 @@
             }
         }
     }
+    
     form{
-        .add-categorie{
-            margin: 1.5rem 0 2.5rem 0;
-            border-radius: .8rem;
-            padding: 1rem;
-            background: transparent;
-            border: 2px dashed $blue-one;
-            transition: 0.3s;
-            cursor: pointer;
-            &:hover{
-                background: $white;
-                box-shadow: 0 1rem 3rem rgba(10, 10, 10, 0.12);
-            }
-            a{
+        .errorCategory{
+            margin-top: 1.5rem;
+            @include flex(flex,center,center,null);
+            @include w-h(100%,null);
+            background-color: $errorBackg;
+            padding: .8rem 0;
+            color: $errorText;
+            margin-bottom: .5rem;
+        }
+        .add-categorie{           
+            button{
+                width: 100%; 
+                margin: 1.5rem 0 2.5rem 0;
+                border-radius: .8rem;
+                padding: 1rem;
+                background: transparent;
+                border: 2px dashed $blue-one;
+                transition: 0.3s;
+                cursor: pointer;
                 @include flex(flex,center,center,null);
                 gap: 1rem;
                 @include font(1.2rem,700,$blue-one);
                 text-decoration: none;
                 i{
                     @include font(1rem,null,$blue-one); 
+                }
+                &:hover{
+                    background: $white;
+                    box-shadow: 0 1rem 3rem rgba(10, 10, 10, 0.12);
                 }
             }
         }

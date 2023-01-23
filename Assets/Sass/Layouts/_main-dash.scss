@@ -70,7 +70,12 @@
                     height: 2.8rem;
                     @include font(1rem,null,$grey);
                     .actions{
-                        @include flex(flex,center,center,null);
+                        @include flex(flex,center,end,null);
+                        .btnUpdate{
+                            text-decoration: none;
+                            color: red;
+                        }
+                        
                     }
                 }
                 tr{

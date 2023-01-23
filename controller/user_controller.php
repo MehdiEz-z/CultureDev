@@ -14,12 +14,10 @@ function signUp(){
     $user->setEmail($_POST["Semail"]);
     $user->setPassword(password_hash($_POST['Spassword'],PASSWORD_BCRYPT));
     $user->setImageName($_FILES['img']['tmp_name']);
-    $user->setiImage(uniqid().'_'.$_FILES['img']['name']); 
+    $user->setiImage($_FILES['img']['name']); 
     
     if(empty($user->image)) $user->setiImage('User.jpg');
-    else{
-        
-    }
+   
 
     $result = $user->login();
 
@@ -40,7 +38,7 @@ function logIn(){
     $result = $user->login();
 
     if($result){
-        $_SESSION['user']   = $result['id_user'];
+        $_SESSION['user']   = $result['id'];
         $_SESSION['fname']  = $result['fname'];
         $_SESSION['lname']  = $result['lname'];
         $_SESSION['image']  = $result['image'];

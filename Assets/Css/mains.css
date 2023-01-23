@@ -5,10 +5,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
 .users {
@@ -262,7 +259,11 @@ aside .sidebar a:hover i {
 .dashbd .articles table tbody td .actions {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
+}
+.dashbd .articles table tbody td .actions .btnUpdate {
+  text-decoration: none;
+  color: red;
 }
 .dashbd .articles table tbody tr:last-child td {
   border: none;
@@ -371,7 +372,19 @@ aside .sidebar a:hover i {
   left: 94%;
   color: #B94A48;
 }
-.right-dash form .add-categorie {
+.right-dash form .errorCategory {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #f9dcda;
+  padding: 0.8rem 0;
+  color: #B94A48;
+  margin-bottom: 0.5rem;
+}
+.right-dash form .add-categorie button {
+  width: 100%;
   margin: 1.5rem 0 2.5rem 0;
   border-radius: 0.8rem;
   padding: 1rem;
@@ -379,12 +392,6 @@ aside .sidebar a:hover i {
   border: 2px dashed #16467D;
   transition: 0.3s;
   cursor: pointer;
-}
-.right-dash form .add-categorie:hover {
-  background: white;
-  box-shadow: 0 1rem 3rem rgba(10, 10, 10, 0.12);
-}
-.right-dash form .add-categorie a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -394,9 +401,13 @@ aside .sidebar a:hover i {
   color: #16467D;
   text-decoration: none;
 }
-.right-dash form .add-categorie a i {
+.right-dash form .add-categorie button i {
   font-size: 1rem;
   color: #16467D;
+}
+.right-dash form .add-categorie button:hover {
+  background: white;
+  box-shadow: 0 1rem 3rem rgba(10, 10, 10, 0.12);
 }
 .right-dash form .formContent {
   position: relative;
