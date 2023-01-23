@@ -3,7 +3,7 @@
     background-color: $backg-dash;
     overflow-x: hidden;
     .container{
-        @include grid(grid,14rem auto 23rem,null);
+        @include grid(grid,14rem auto 18rem,null);
         @include w-h(96%,null);
         margin: 0 auto;
         gap: 1.8rem;

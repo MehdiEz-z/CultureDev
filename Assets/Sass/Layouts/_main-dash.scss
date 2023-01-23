@@ -65,18 +65,15 @@
             text-align: center;
             @include card($blue-one);
             tbody{
+                img{
+                    width: 5rem;
+                }
                 td{
                     border-bottom: 2px solid #f6f4f4;
                     height: 2.8rem;
+                    padding: 10px;
+                    min-width: 50px;
                     @include font(1rem,null,$grey);
-                    .actions{
-                        @include flex(flex,center,end,null);
-                        .btnUpdate{
-                            text-decoration: none;
-                            color: red;
-                        }
-                        
-                    }
                 }
                 tr{
                     &:last-child{

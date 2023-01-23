@@ -73,11 +73,11 @@ require_once './includes/sidebar.php';
                             <td>Mehdi</td>
                             <td>Article number 222</td>
                             <td>FrontEnd</td>
-                            <td>ddddddddddddddddddddddddddddddddddddddddd</td>
+                            <td>ddddddddddddddddddddddddd</td>
                             <td>22/12/2022</td>
-                            <td>image</td>
+                            <td><img src="../Assets/Images/illustration.png" alt=""></td>
                             <td class="actions">
-                                <a href=""><i class="fa-solid fa-pen-to-square btnUpda"></i></a>
+                                <a href=""><i class="fa-solid fa-pen-to-square btnUpdate"></i></a>
                                 <a href=""><i class="fa-solid fa-trash-can btnDelete"></i></a>
                             </td>
                         </tr>
@@ -85,9 +85,9 @@ require_once './includes/sidebar.php';
                             <td>yasser</td>
                             <td>Article number 222</td>
                             <td>FrontEnd</td>
-                            <td>ddddddddddddddddddddddddddddddddddddddddd</td>
+                            <td>dddddddddddddddd</td>
                             <td>22/12/2022</td>
-                            <td>image</td>
+                            <td><img src="../Assets/Images/illustration.png" alt=""></td>
                             <td class="actions">
                                 <a href=""><i class="fa-solid fa-pen-to-square"></i></a>
                                 <a href=""><i class="fa-solid fa-trash-can"></i></a>
@@ -111,12 +111,13 @@ require_once './includes/sidebar.php';
                 </div>
                 <!-- Profile infos -->
                 <div class="profile">
+                    <?php $user = displayUser(); ?>
                     <div class="infos">
-                        <p>Hey, <span><?php echo $_SESSION['fname'].' '.$_SESSION['lname'] ?></span></p>
+                        <p>Hey, <span><?= $user['fname'].' '.$user['lname']; ?></span></p>
                         <small>Admin</small>
                     </div>
                     <div class="photo-profile">
-                        <img src="../Assets/Images/Users/<?php echo $_SESSION['image'] ?>" alt="Photo de profile">
+                        <img src="../Assets/Images/Users/<?= $user['image'];?>" alt="Photo de profile">
                     </div>
                 </div>
             </div>
@@ -131,7 +132,7 @@ require_once './includes/sidebar.php';
                             </div>
                             <a href="dashboard.php?cat_id=<?= $category['category_id'] ?>"><i class="delete-cat fa-solid fa-xmark "></i></a>
                             </div>
-             <?php   }?>
+                <?php   }?>
             </div>
             <form action="" method="POST" class="formCategory">
                 <?php if(isset($_SESSION['errorCategory'])){ ?>         

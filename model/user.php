@@ -68,13 +68,13 @@ class User extends Connection
         return $stmt->fetch(); 
     }
 
-    // function getuser(){
+    function getuser(){
        
-    //     $stmt = $this->connect()->prepare("SELECT * FROM users WHERE id_user= ?");
-    //     $stmt->execute([$this->id]);
+        $stmt = $this->connect()->prepare("SELECT * FROM users WHERE id= ?");
+        $stmt->execute([$this->id]);
 
-    //     return $stmt->fetch();
-    // }
+        return $stmt->fetch();
+    }
 
     function countuser(){
    

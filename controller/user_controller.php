@@ -39,9 +39,6 @@ function logIn(){
 
     if($result){
         $_SESSION['user']   = $result['id'];
-        $_SESSION['fname']  = $result['fname'];
-        $_SESSION['lname']  = $result['lname'];
-        $_SESSION['image']  = $result['image'];
         $password_v = password_verify($_POST["password"],$result['password']);
         if($password_v == $_POST["password"]){
             header('location:../view/dashboard.php');
@@ -53,12 +50,12 @@ function logIn(){
     }
 }
 
-// function displayUser(){
-//     $user = new User();
+function displayUser(){
+    $user = new User();
 
-//     $user->setUserId($_SESSION['user']);
-//     return $this->getuser();
-// }
+    $user->setUserId($_SESSION['user']);
+    return $user->getuser();
+}
 
 $user = new User();
 $countUser = $user->countuser();

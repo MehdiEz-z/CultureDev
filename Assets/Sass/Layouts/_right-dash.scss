@@ -2,7 +2,6 @@
     margin-top: 1.4rem;
     .top{
         @include flex(flex,center,end,null);
-        gap: 2rem;
         button{
             display: none;
         }  
@@ -29,16 +28,16 @@
             gap: 1rem;
             text-align: right;
             .infos{
-                @include font(.8rem,500,$black);
+                @include font(1rem,500,$black);
                 span{
-                    @include font(.8rem,900,$blue-one); 
+                    @include font(1rem,900,$blue-one); 
                 }
                 small{
-                    @include font(.7rem,400,$black);
+                    @include font(.8rem,400,$black);
                 }
             }
             img{
-                width: 2.5rem;
+                width: 3rem;
                 border-radius: 50%;
             }
         }

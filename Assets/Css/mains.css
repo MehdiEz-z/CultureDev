@@ -250,20 +250,16 @@ aside .sidebar a:hover i {
 .dashbd .articles table:hover {
   box-shadow: none;
 }
+.dashbd .articles table tbody img {
+  width: 5rem;
+}
 .dashbd .articles table tbody td {
   border-bottom: 2px solid #f6f4f4;
   height: 2.8rem;
+  padding: 10px;
+  min-width: 50px;
   font-size: 1rem;
   color: #bbb;
-}
-.dashbd .articles table tbody td .actions {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-}
-.dashbd .articles table tbody td .actions .btnUpdate {
-  text-decoration: none;
-  color: red;
 }
 .dashbd .articles table tbody tr:last-child td {
   border: none;
@@ -276,7 +272,6 @@ aside .sidebar a:hover i {
   display: flex;
   align-items: center;
   justify-content: end;
-  gap: 2rem;
 }
 .right-dash .top button {
   display: none;
@@ -314,22 +309,22 @@ aside .sidebar a:hover i {
   text-align: right;
 }
 .right-dash .top .profile .infos {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 500;
   color: #403f3f;
 }
 .right-dash .top .profile .infos span {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 900;
   color: #16467D;
 }
 .right-dash .top .profile .infos small {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 400;
   color: #403f3f;
 }
 .right-dash .top .profile img {
-  width: 2.5rem;
+  width: 3rem;
   border-radius: 50%;
 }
 .right-dash .catégories {
@@ -731,7 +726,7 @@ aside .sidebar a:hover i {
 }
 .dash .container {
   display: grid;
-  grid-template-columns: 14rem auto 23rem;
+  grid-template-columns: 14rem auto 18rem;
   width: 96%;
   margin: 0 auto;
   gap: 1.8rem;
