@@ -60,5 +60,8 @@ function logIn(){
 //     return $this->getuser();
 // }
 
+$user = new User();
+$countUser = $user->countuser();
+
 
 ?>

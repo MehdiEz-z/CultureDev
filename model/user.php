@@ -75,6 +75,14 @@ class User extends Connection
 
     //     return $stmt->fetch();
     // }
+
+    function countuser(){
+   
+        $stmt = $this->connect()->prepare("SELECT * FROM users");
+        $stmt->execute();
+    
+        return $stmt->rowCount();
+    }
 }
 
 ?>

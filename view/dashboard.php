@@ -48,7 +48,7 @@ require_once './includes/sidebar.php';
                         <div class="express">
                             <h3>Total Admins</h3></div>
                         <div class="count">
-                            <h1><?= $countCategorie ?></h1>
+                            <h1><?= $countUser ?></h1>
                         </div>
                     </div>
                 </div>
