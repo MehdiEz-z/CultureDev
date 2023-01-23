@@ -1,8 +1,8 @@
 <?php
 require_once 'connection.php';
 
-class Categories extends Connection
-{
+class Categories extends Connection{
+    
     public $id;
     public $categorie;
 

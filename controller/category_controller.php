@@ -2,7 +2,6 @@
 require_once '../model/category.php';
 
 if(isset($_POST["saveCategory"])) addCategory();
-if(isset($_POST["getCategories"])) getCategories();
 if(isset($_GET["cat_id"])) deleteCategorie();
 
 function addCategory(){

@@ -26,7 +26,7 @@ require_once './includes/sidebar.php';
                         <div class="express">
                             <h3>Total Articles</h3></div>
                         <div class="count">
-                            <h1><?= $countCategorie ?></h1>
+                            <h1><?= $countArticle ?></h1>
                         </div>
                     </div>
                 </div>
@@ -69,30 +69,20 @@ require_once './includes/sidebar.php';
                         </tr>
                     </thead>
                     <tbody>
+                        <?php foreach(getArticles() as $article){ ?>
                         <tr>
-                            <td>Mehdi</td>
-                            <td>Article number 222</td>
-                            <td>FrontEnd</td>
-                            <td>ddddddddddddddddddddddddd</td>
-                            <td>22/12/2022</td>
+                            <td><?= $article['fname'];?></td>
+                            <td><?= $article['titre'];?></td>
+                            <td><?= $article['name'];?></td>
+                            <td><?= $article['description'];?></td>
+                            <td><?= $article['date'];?></td>
                             <td><img src="../Assets/Images/illustration.png" alt=""></td>
                             <td class="actions">
                                 <a href=""><i class="fa-solid fa-pen-to-square btnUpdate"></i></a>
                                 <a href=""><i class="fa-solid fa-trash-can btnDelete"></i></a>
                             </td>
                         </tr>
-                        <tr>
-                            <td>yasser</td>
-                            <td>Article number 222</td>
-                            <td>FrontEnd</td>
-                            <td>dddddddddddddddd</td>
-                            <td>22/12/2022</td>
-                            <td><img src="../Assets/Images/illustration.png" alt=""></td>
-                            <td class="actions">
-                                <a href=""><i class="fa-solid fa-pen-to-square"></i></a>
-                                <a href=""><i class="fa-solid fa-trash-can"></i></a>
-                            </td>
-                        </tr>
+                        <?php }?>
                     </tbody>
                 </table>
             </div>
@@ -126,14 +116,14 @@ require_once './includes/sidebar.php';
                 <h2>Catégories</h2>
                 <?php
                 foreach(getCategories() as $category){ ?>
-                    <div class="category">
-                            <div class="category-infos">
-                                <p><span class="username-category">Categorie : </span><?= $category['name'] ?></p>
-                            </div>
-                            <a href="dashboard.php?cat_id=<?= $category['category_id'] ?>"><i class="delete-cat fa-solid fa-xmark "></i></a>
-                            </div>
-                <?php   }?>
-            </div>
+                <div class="category">
+                    <div class="category-infos">
+                        <p><span class="username-category">Categorie : </span><?= $category['name'] ?></p>
+                    </div>
+                    <a href="dashboard.php?cat_id=<?= $category['category_id'] ?>"><i class="delete-cat fa-solid fa-xmark "></i></a>
+                    </div>
+                <?php }?>
+                </div>
             <form action="" method="POST" class="formCategory">
                 <?php if(isset($_SESSION['errorCategory'])){ ?>         
                     <span class="errorCategory"><?= $_SESSION['errorCategory'];?></span>             

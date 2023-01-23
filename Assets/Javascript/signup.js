@@ -135,16 +135,16 @@
 //     } 
 // }
 
-// // let signupBtn        =signup.querySelector(".signup-btn");
+// let signupBtn        =signup.querySelector(".signup-btn");
 
-// // signup.onsubmit         = (e)=>{
-// //     e.preventDefault();
-// //     console.log("hahah")
-// // }
+// signup.onsubmit         = (e)=>{
+//     e.preventDefault();
+//     console.log("hahah")
+// }
 
-// // signupBtn.onclick     = ()=>{
-// //         validateFname()
-// //         validateLname()
-// //         validateSemail()
-// //         validateSpass() 
-// // }
+// signupBtn.onclick     = ()=>{
+//         validateFname()
+//         validateLname()
+//         validateSemail()
+//         validateSpass() 
+// }

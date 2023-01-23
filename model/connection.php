@@ -1,8 +1,8 @@
 <?php
 
 
-abstract class Connection
-{
+abstract class Connection{
+    
     private string $localhost = "localhost";
     private string $username = "root";  
     private string $db_password = "";

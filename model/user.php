@@ -1,8 +1,8 @@
 <?php
 require_once 'connection.php';
 
-class User extends Connection
-{
+class User extends Connection{
+    
     public $id;
     public $fname;
     public $lname;  
