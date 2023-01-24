@@ -61,7 +61,7 @@ require_once './includes/sidebar.php';
                         <input type="text">
                         <button><i class="fa-solid fa-magnifying-glass"></i></button>
                     </div> 
-                    <button type="button" class="addArticles" data-bs-toggle="modal" data-bs-target="#addArt"><i class="fa-solid fa-plus"></i>Ajouter un article</button>
+                    <button type="button" id="add-btn" class="addArticles" data-bs-toggle="modal" data-bs-target="#addArt"><i class="fa-solid fa-plus"></i>Ajouter un article</button>
                 </div>
                 <div class="articleTable">
                     <div class="tableContent">
@@ -86,10 +86,15 @@ require_once './includes/sidebar.php';
                                     <td><?= $article['description'];?></td>
                                     <td><?= $article['date'];?></td>
                                     <td><img src="../Assets/Images/Articles/<?= $article['cover'];?>" alt=""></td>
+
                                     <td class="actions">
-                                        <a href=""><i class="fa-solid fa-pen-to-square btnUpdate"></i></a>
-                                        <a href="dashboard.php?article_id=<?= $article['article_id']?>&cover-article=<?= $article['cover']?>"><i class="fa-solid fa-trash-can btnDelete"></i></a>
+                                        <a href="dashboard.php" data-bs-toggle="modal" data-bs-target="#addArt" 
+                                            onclick="updateArticle(<?= $article['article_id'];?>,'<?= $article['titre'];?>', <?= $article['id_category'];?>,'<?= $article['description'];?>',
+                                            '<?= $article['date'];?>','<?= $article['cover'] ;?>')"><i class="fa-solid fa-pen-to-square btnUpdate"></i></a>
+
+                                        <a href="dashboard.php?article_Did=<?= $article['article_id']?>&cover-article=<?= $article['cover']?>"><i class="fa-solid fa-trash-can btnDelete"></i></a>
                                     </td>
+
                                 </tr>
                                 <?php }?>
                             </tbody>
@@ -153,4 +158,5 @@ require_once './includes/sidebar.php';
     </div>
 
 </body>
+<script src="../Assets/Javascript/modal-article.js"></script>
 </html>

@@ -24,5 +24,13 @@ function getCategories(){
 
 }
 
+function deleteCategorie(){
+    $category = new Categories();
+    $category->setCategoryId($_GET["cat_id"]);
+
+    $category->deletecategorie();
+    header("Location:../view/dashboard.php");  
+}
+
 $category = new Categories();
 $countCategorie = $category->countcategorie();

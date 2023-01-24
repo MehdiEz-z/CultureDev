@@ -43,7 +43,7 @@ class Articles extends Connection{
         $this->date = $date;
     }
 
-    public function setiCover($cover)
+    public function setCover($cover)
     {
         $this->cover = $cover;
     }
@@ -52,6 +52,11 @@ class Articles extends Connection{
     {
         $this->covername = $covername;
     }  
+
+    public function setOldCover($oldcover)
+    {
+        $this->oldcover = $oldcover;
+    }
     
 
     //=================================== methods ===================================//
@@ -74,11 +79,12 @@ class Articles extends Connection{
         
     }
 
-    // function updatearticle(){
-        
-    //     $stmt = $this->connect()->prepare("UPDATE articles SET name = ? WHERE articles_id = ?");
-    //     $stmt->execute([$this->article, $this->id]);
-    // }
+    function updatearticle(){
+        $stmt = $this->connect()->prepare("UPDATE articles SET id_user =?,titre=?,id_category=?,description=?,date=?,cover=? WHERE article_id=?");
+        $stmt->execute([$this->auteur,$this->titre,$this->category,$this->description,$this->date,$this->cover,$this->id]);
+        move_uploaded_file($this->covername, '../Assets/Images/Articles/'. $this->cover);
+        unlink('../Assets/Images/Articles/'.$this->oldcover);
+    }
 
     function deletearticle(){
 
