@@ -5,10 +5,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
 ::-webkit-scrollbar {
@@ -223,7 +220,7 @@ aside .sidebar a:hover i {
   justify-content: space-between;
 }
 .dashbd .articles .table-head .addArticles {
-  width: 15%;
+  width: 20%;
   border-radius: 0.8rem;
   padding: 0.5rem;
   background: white;
@@ -233,7 +230,7 @@ aside .sidebar a:hover i {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.5rem;
   font-size: 0.8rem;
   font-weight: 700;
   color: #16467D;
@@ -273,15 +270,22 @@ aside .sidebar a:hover i {
   text-align: center;
 }
 .dashbd .articles .articleTable table tbody img {
-  width: 5rem;
+  height: 2rem;
 }
 .dashbd .articles .articleTable table tbody td {
   border-bottom: 2px solid #f6f4f4;
-  height: 2.8rem;
-  padding: 10px 10px 0px 10px;
-  min-width: 50px;
+  height: 3rem;
+  padding: 10px;
   font-size: 1rem;
   color: #bbb;
+}
+.dashbd .articles .articleTable table tbody td .btnUpdate {
+  text-decoration: none;
+  color: #149BB4;
+}
+.dashbd .articles .articleTable table tbody td .btnDelete {
+  text-decoration: none;
+  color: #E38D25;
 }
 .dashbd .articles .articleTable table tbody tr:last-child td {
   border: none;
@@ -293,10 +297,7 @@ aside .sidebar a:hover i {
 .right-dash .top {
   display: flex;
   align-items: center;
-  justify-content: end;
-}
-.right-dash .top button {
-  display: none;
+  justify-content: space-between;
 }
 .right-dash .top .theme-toggler {
   display: flex;
@@ -781,6 +782,6 @@ aside .sidebar a:hover i {
   display: grid;
   grid-template-columns: 14rem auto 18rem;
   width: 96%;
-  margin: 0 auto !important;
+  margin: 0 auto;
   gap: 1.8rem;
 }

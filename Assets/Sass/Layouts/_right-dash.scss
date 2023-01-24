@@ -1,10 +1,7 @@
 .right-dash{
     margin-top: 1.4rem;
     .top{
-        @include flex(flex,center,end,null);
-        button{
-            display: none;
-        }  
+        @include flex(flex,center,space-between,null);  
         .theme-toggler{
             @include flex(flex,center,space-between,null);
             @include w-h(3.2rem,1.3rem);

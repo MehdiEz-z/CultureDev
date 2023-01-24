@@ -5,7 +5,7 @@
     .container{
         @include grid(grid,14rem auto 18rem,null);
         @include w-h(96%,null);
-        margin: 0 auto !important;
+        margin: 0 auto;
         gap: 1.8rem;
     }   
 }

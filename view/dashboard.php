@@ -61,7 +61,7 @@ require_once './includes/sidebar.php';
                         <input type="text">
                         <button><i class="fa-solid fa-magnifying-glass"></i></button>
                     </div> 
-                    <button type="submit" name ="addArticle" class="addArticles"><i class="fa-solid fa-plus"></i>Ajouter un article</button>
+                    <button type="button" class="addArticles" data-bs-toggle="modal" data-bs-target="#addArt"><i class="fa-solid fa-plus"></i>Ajouter un article</button>
                 </div>
                 <div class="articleTable">
                     <div class="tableContent">
@@ -85,10 +85,10 @@ require_once './includes/sidebar.php';
                                     <td><?= $article['name'];?></td>
                                     <td><?= $article['description'];?></td>
                                     <td><?= $article['date'];?></td>
-                                    <td><img src="../Assets/Images/illustration.png" alt=""></td>
+                                    <td><img src="../Assets/Images/Articles/<?= $article['cover'];?>" alt=""></td>
                                     <td class="actions">
                                         <a href=""><i class="fa-solid fa-pen-to-square btnUpdate"></i></a>
-                                        <a href=""><i class="fa-solid fa-trash-can btnDelete"></i></a>
+                                        <a href="dashboard.php?article_id=<?= $article['article_id'] ?>"><i class="fa-solid fa-trash-can btnDelete"></i></a>
                                     </td>
                                 </tr>
                                 <?php }?>
@@ -97,14 +97,15 @@ require_once './includes/sidebar.php';
                     </div>
                 </div>
             </div>
+                    
+            <?php
+                require_once './includes/modal.php';
+            ?>
         </main>
         <!-- Right Dashboard content -->
         <div class="right-dash">
             <!-- Top Right Dashboard -->
             <div class="top">
-                <button id="menu-btn">
-                        <i class="fa-solid fa-bars"></i>
-                </button>
                 <!-- Dark & Light Mode -->
                 <div class="theme-toggler">
                     <i class="fa-solid fa-lightbulb active"></i>
@@ -150,5 +151,6 @@ require_once './includes/sidebar.php';
             </form>
         </div>
     </div>
+
 </body>
 </html>

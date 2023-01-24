@@ -14,7 +14,7 @@ class Articles extends Connection{
 
     //=================================== setters ===================================//
     
-    public function setPostId($id)
+    public function setArticleId($id)
     {
         $this->id = $id;
     }
@@ -66,12 +66,13 @@ class Articles extends Connection{
         return $stmt->fetchAll();
     }
 
-    // function addarticle(){
+    function addarticle(){
 
-    //     $stmt = $this->connect()->prepare("INSERT INTO articles  VALUES (NULL,?)");
-    //     $stmt->execute([$this->article]);
+        $stmt = $this->connect()->prepare("INSERT INTO articles  VALUES (NULL,?,?,?,?,?,?)");
+        $stmt->execute([$this->auteur,$this->titre,$this->category,$this->description,$this->date,$this->cover]);
+        move_uploaded_file($this->covername, '../Assets/Images/Articles/'.$this->cover);
         
-    // }
+    }
 
     // function updatearticle(){
         
@@ -79,11 +80,11 @@ class Articles extends Connection{
     //     $stmt->execute([$this->article, $this->id]);
     // }
 
-    // function deletearticle(){
+    function deletearticle(){
 
-    //     $stmt = $this->connect()->prepare("DELETE FROM articles WHERE articles_id=?");
-    //     $stmt->execute([$this->id]);
-    // }
+        $stmt = $this->connect()->prepare("DELETE FROM articles WHERE articles_id=?");
+        $stmt->execute([$this->id]);
+    }
 
     function countarticle(){
    
