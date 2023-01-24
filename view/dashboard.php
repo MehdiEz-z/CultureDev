@@ -88,7 +88,7 @@ require_once './includes/sidebar.php';
                                     <td><img src="../Assets/Images/Articles/<?= $article['cover'];?>" alt=""></td>
                                     <td class="actions">
                                         <a href=""><i class="fa-solid fa-pen-to-square btnUpdate"></i></a>
-                                        <a href="dashboard.php?article_id=<?= $article['article_id'] ?>"><i class="fa-solid fa-trash-can btnDelete"></i></a>
+                                        <a href="dashboard.php?article_id=<?= $article['article_id']?>&cover-article=<?= $article['cover']?>"><i class="fa-solid fa-trash-can btnDelete"></i></a>
                                     </td>
                                 </tr>
                                 <?php }?>

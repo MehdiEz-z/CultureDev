@@ -2,6 +2,7 @@
 require_once '../model/article.php';
 
 if(isset($_POST["addArt"])) addArticle();
+if(isset($_GET["article_id"])) deleteArticle();
 
 function getArticles(){
     $article = new Articles();
@@ -21,6 +22,15 @@ function addArticle(){
 
     $article->addarticle();
     header("Location:../view/dashboard.php");  
+}
+
+function deleteArticle(){
+    $article = new Articles();
+
+    $article->setArticleId($_GET["article_id"]);
+
+    $article->deletearticle();
+    header("Location:../view/dashboard.php"); 
 }
 
 $article = new Articles();

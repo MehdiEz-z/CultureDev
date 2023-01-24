@@ -82,8 +82,9 @@ class Articles extends Connection{
 
     function deletearticle(){
 
-        $stmt = $this->connect()->prepare("DELETE FROM articles WHERE articles_id=?");
+        $stmt = $this->connect()->prepare("DELETE FROM articles WHERE article_id=?");
         $stmt->execute([$this->id]);
+        unlink('../Assets/Images/Articles/'.$_GET['cover-article']);
     }
 
     function countarticle(){
