@@ -72,14 +72,12 @@ function validatePass(){
 login.addEventListener('submit', e=>{
     e.preventDefault();
 
-    console.log("hhh")
+    let isValide    = true;
+    if(!validateEmail()) isValide= false;
+    if(!validatePass()) isValide= false;
 
-    // let isValide    = true;
-    // if(!validateEmail()) isValide= false;
-    // if(!validatePass()) isValide= false;
-
-    // if(isValide){
-    //     e.target.submit();
-    // }
+    if(isValide){
+        e.target.submit();
+    }
 });
 

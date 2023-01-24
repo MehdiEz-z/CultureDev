@@ -12,7 +12,7 @@ require_once '../controller/shared.php';
             <div class="interior-box">
                 <div class="forms">
                     <!-- Sign-up Form -->
-                    <form action="" method="POST" class="signup" enctype="multipart/form-data">
+                    <form action="" method="POST" id="signupForm" class="signup" enctype="multipart/form-data">
                         <!-- Logo Form-->
                         <div class="logo">
                             <img src="../Assets/Images/logo.png" alt="CultureDevLogo">

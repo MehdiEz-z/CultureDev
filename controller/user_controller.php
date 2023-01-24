@@ -1,9 +1,12 @@
 <?php
 require_once '../model/user.php';
 
+
+// print_r($_POST);
+// die;
   
-if(isset($_POST["signup"])) signUp();
-if(isset($_POST["login"])) logIn();
+if(isset($_POST["Fname"])) signUp();
+if(isset($_POST["email"])) logIn();
 // class userController extends User{
     
 function signUp(){

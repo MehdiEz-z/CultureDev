@@ -11,7 +11,7 @@ require_once '../controller/shared.php';
             <div class="interior-box">
                 <div class="forms">
                     <!-- Login Form -->
-                    <form action="" method="POST" class="login">
+                    <form action="" method="POST" class="login" id="loginForm">
                         <!-- Logo Form-->
                         <div class="logo">
                             <img src="../Assets/Images/logo.png" alt="CultureDevLogo">
@@ -68,5 +68,5 @@ require_once '../controller/shared.php';
     </main>
 </body>
 <script src="../Assets/Javascript/input-animation.js"></script>
-<script src="../Assets/Javascript/login.js"></script>
+<script src="../Assets/Javascript/Loginn.js"></script>
 </html>
