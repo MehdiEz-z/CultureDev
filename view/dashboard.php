@@ -111,7 +111,9 @@ require_once './includes/sidebar.php';
         <div class="right-dash">
             <!-- Top Right Dashboard -->
             <div class="top">
-                <button class="menu-btn" id="menu-btn"><i class="fa-solid fa-bars"></i> </button>
+                <div class="menu-btn" id="menu-btn">
+                    <i class="fa-solid fa-bars"></i> 
+                </div>
                 <!-- Dark & Light Mode -->
                 <div class="theme-toggler">
                     <i class="fa-solid fa-lightbulb active"></i>
@@ -160,4 +162,5 @@ require_once './includes/sidebar.php';
 
 </body>
 <script src="../Assets/Javascript/modal-article.js"></script>
+<script src="../Assets/Javascript/dashboard.js"></script>
 </html>

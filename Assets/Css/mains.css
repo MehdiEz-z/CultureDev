@@ -274,6 +274,9 @@ aside .sidebar a:hover i {
   width: 100%;
   text-align: center;
 }
+.dashbd .articles .articleTable table thead {
+  color: #403f3f;
+}
 .dashbd .articles .articleTable table tbody img {
   height: 2rem;
 }
@@ -881,16 +884,30 @@ aside .sidebar a:hover i {
   }
   .dash .container aside {
     position: fixed;
-    left: 0;
+    left: -110%;
     background: white;
-    width: 18rem;
-    height: 100vw;
+    width: 14rem;
+    height: 100vh;
     z-index: 3;
     padding-right: 1rem;
     display: none;
+    box-shadow: 1rem 3rem 4rem rgba(10, 10, 10, 0.08);
+    -webkit-animation: showMenu 400ms ease forwards;
+            animation: showMenu 400ms ease forwards;
+  }
+  @-webkit-keyframes showMenu {
+    to {
+      left: 0;
+    }
+  }
+  @keyframes showMenu {
+    to {
+      left: 0;
+    }
   }
   .dash .container aside .close {
     display: inline-block;
+    font-size: 1.2rem;
     cursor: pointer;
   }
   .dash .container aside .logo {
@@ -949,7 +966,7 @@ aside .sidebar a:hover i {
     cursor: pointer;
     position: absolute;
     left: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
   .dash .right-dash .top .theme-toggler {
     position: absolute;

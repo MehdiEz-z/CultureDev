@@ -71,6 +71,9 @@
             table{
                 width: 100%;
                 text-align: center;
+                thead{
+                    color: $black;
+                }
                 tbody{
                     img{
                         height: 2rem;

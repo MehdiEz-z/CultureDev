@@ -90,14 +90,24 @@
             width: 100%;
             grid-template-columns: 1fr;
             aside{
-                @include position(fixed,null,0);
+                @include position(fixed,null,-110%);
                 background: $white;
-                @include w-h(18rem,100vw);
+                @include w-h(14rem,100vh);
                 z-index: 3;
                 padding-right: 1rem;
                 display: none;
+                box-shadow: 1rem 3rem 4rem rgba(10, 10, 10, 0.08);
+                animation: showMenu 400ms ease forwards;
+
+                @keyframes showMenu {
+                   to{
+                    left: 0;
+                   } 
+                }
+
                 .close{
                     display: inline-block;
+                    font-size: 1.2rem;
                     cursor: pointer;
                 }
                 .logo{
@@ -150,7 +160,7 @@
                     background: transparent;
                     cursor: pointer;
                     @include position(absolute,null,1rem);
-                    font-size: 1.2rem;
+                    font-size: 1.5rem;
                 }
                 .theme-toggler{
                     @include position(absolute,null,70%);
