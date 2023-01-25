@@ -21,7 +21,7 @@
             .middle{
                 @include flex(flex,center,space-between,null);
                 h3{
-                    @include font(1rem,7    00,$black);
+                    @include font(1rem,700,$black);
                 }
                 h1{
                     @include font(2.5rem,900,$orange); 

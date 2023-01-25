@@ -111,6 +111,7 @@ require_once './includes/sidebar.php';
         <div class="right-dash">
             <!-- Top Right Dashboard -->
             <div class="top">
+                <button class="menu-btn" id="menu-btn"><i class="fa-solid fa-bars"></i> </button>
                 <!-- Dark & Light Mode -->
                 <div class="theme-toggler">
                     <i class="fa-solid fa-lightbulb active"></i>
@@ -140,7 +141,7 @@ require_once './includes/sidebar.php';
                     <a href="dashboard.php?cat_id=<?= $category['category_id'] ?>"><i class="delete-cat fa-solid fa-xmark "></i></a>
                     </div>
                 <?php }?>
-                </div>
+            </div>
             <form action="" method="POST" class="formCategory">
                 <?php if(isset($_SESSION['errorCategory'])){ ?>         
                     <span class="errorCategory"><?= $_SESSION['errorCategory'];?></span>             

@@ -1,0 +1,170 @@
+//Media Querie for Big tablettes & small Laptops
+@media screen and (max-width: 1200px){
+    .dash{
+        .container{
+            max-width: 1200px;
+            width: 90%;
+            grid-template-columns: 5rem auto 12rem;
+            aside{
+               h3{
+                display: none;
+               }
+               a{
+                width: 4.5rem;
+                &:last-child{
+                    position: relative;
+                    margin-top: 1.8rem;
+                }
+               }
+            }
+        }
+        .dashbd{
+            .statistiques{
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            .articles{
+                width: 100%;
+                @include position(absolute,null,50%);
+                transform: translateX(-50%);
+                margin: 1rem 0 0 11.5rem;
+                .table-head{
+                    width: 79vw;
+                    .addArticles{
+                        width: 30%;
+                    }
+                }
+                .articleTable{
+                    width: 79vw;
+                }
+            }
+        }
+        .right-dash{
+            .top{
+                justify-content: space-between;
+                .profile{
+                    .infos{
+                        display: none;
+                        p{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+            .catégories{
+                .category{
+                    padding: .2rem .5rem;
+                    p{
+                        @include font(.8rem,600,$black);
+                        span{
+                            @include font(0.9rem,700,$blue-one);
+                        }   
+                    }
+                    .delete-cat{
+                        @include position(absolute,7%,90%);
+                    }
+                }
+            }
+            .formCategory{
+                .errorCategory{
+                    margin-top: .5rem;
+                }
+                button{
+                    margin-top: .8rem;
+                    font-size: .8rem;
+                    padding: .5rem;
+                }
+                .input-categorie{
+                    height: 80%;
+                }
+            }
+        }
+    }
+}
+
+//Media Querie for smaller Tablettes & small Mobile
+@media screen and (max-width: 768px){
+    .dash{
+        .container{
+            max-width: 768px;
+            width: 100%;
+            grid-template-columns: 1fr;
+            aside{
+                @include position(fixed,null,0);
+                background: $white;
+                @include w-h(18rem,100vw);
+                z-index: 3;
+                padding-right: 1rem;
+                display: none;
+                .close{
+                    display: inline-block;
+                    cursor: pointer;
+                }
+                .logo{
+                    margin-left: 1rem;
+                }
+                h3{
+                    display: inline;
+                }
+                a{
+                    @include w-h(100%,3.4rem);
+                    &:last-child{
+                        position: absolute;
+                        bottom: 5rem;
+                    }
+                }
+            }
+        }
+        .dashbd{
+            margin-top: 6rem; 
+            .articles{
+                position: relative;
+                margin: 1.5rem 0 0 0;
+                width: 100%;
+
+                .table-head{
+                    width: 100%;
+                    .addArticles{
+                        width: 40%;
+                    }
+                }
+                .articleTable{
+                    width: 100%;
+                }
+            }
+        }
+        .right-dash{
+            width: 100%;
+            margin: -2rem auto 4rem;
+            .top{
+                @include position(fixed,0,0);
+                @include w-h(100%,4.6rem);
+                @include flex(flex,center,end,null);
+                background: $white;
+                padding: 0 0.8rem;
+                margin: 0;
+                z-index: 2;
+                box-shadow: 0 1rem 1rem rgba(10, 10, 10, 0.08);
+                .menu-btn{
+                    display: inline-block;
+                    background: transparent;
+                    cursor: pointer;
+                    @include position(absolute,null,1rem);
+                    font-size: 1.2rem;
+                }
+                .theme-toggler{
+                    @include position(absolute,null,70%);
+                }
+            }
+            .catégories{
+                .category{
+                    @include flex(flex,center,center,null);
+                    gap: 1rem;
+                    .delete-cat{
+                        @include position(absolute,7%,96%);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,7 +1,10 @@
 .right-dash{
     margin-top: 1.4rem;
     .top{
-        @include flex(flex,center,space-between,null);  
+        @include flex(flex,center,end,null);
+        .menu-btn{
+            display: none;
+        } 
         .theme-toggler{
             @include flex(flex,center,space-between,null);
             @include w-h(3.2rem,1.3rem);
@@ -26,6 +29,9 @@
             text-align: right;
             .infos{
                 @include font(1rem,500,$black);
+                p{
+                    margin-bottom: 0;
+                }
                 span{
                     @include font(1rem,900,$blue-one); 
                 }
@@ -46,7 +52,7 @@
         }
         .category{
             background: $white;
-            padding: 1.5rem;
+            padding: .2rem 1.5rem;
             border-radius: .5rem;
             border-bottom: 5px solid $blue-tree;
             margin-top: .3rem;
@@ -61,6 +67,7 @@
                 }
             }
             p{
+                margin-bottom: 0;
                 @include font(1.2rem,600,$black);
                 span{
                     @include font(1.2rem,700,$blue-one);

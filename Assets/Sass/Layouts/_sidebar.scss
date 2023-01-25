@@ -11,6 +11,7 @@ aside{
             h3{
                 @include font(1.8rem,null,$blue-one);
                 padding-top: .08rem;
+                margin-bottom: 0;
                 span{
                     color: $orange;
                 }
@@ -34,7 +35,8 @@ aside{
             gap: 1rem;
             transition: .4s;
             h3{
-                @include font(.8rem,500,null)
+                @include font(.8rem,500,null);
+                margin-bottom: 0;
             }
             i{
                 @include font(1rem,null,null);
