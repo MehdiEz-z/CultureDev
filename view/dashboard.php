@@ -57,10 +57,10 @@ require_once './includes/sidebar.php';
             <div class="articles">
                 <h2>Articles</h2>
                 <div class="table-head">
-                    <div class="searchTable">
+                    <!-- <div class="searchTable">
                         <input type="text">
                         <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </div> 
+                    </div>  -->
                     <button type="button" id="add-btn" class="addArticles" data-bs-toggle="modal" data-bs-target="#addArt"><i class="fa-solid fa-plus"></i>Ajouter un article</button>
                 </div>
                 <div class="articleTable">
@@ -161,6 +161,9 @@ require_once './includes/sidebar.php';
     </div>
 
 </body>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
 <script src="../Assets/Javascript/modal-article.js"></script>
 <script src="../Assets/Javascript/dashboard.js"></script>
 </html>

@@ -92,7 +92,7 @@
             aside{
                 @include position(fixed,null,-110%);
                 background: $white;
-                @include w-h(14rem,100vh);
+                @include w-h(14rem,100%);
                 z-index: 3;
                 padding-right: 1rem;
                 display: none;
@@ -104,7 +104,9 @@
                     left: 0;
                    } 
                 }
-
+                .sidebar{
+                    height: 100%;
+                }
                 .close{
                     display: inline-block;
                     font-size: 1.2rem;
@@ -120,7 +122,7 @@
                     @include w-h(100%,3.4rem);
                     &:last-child{
                         position: absolute;
-                        bottom: 5rem;
+                        bottom: 8rem;
                     }
                 }
             }

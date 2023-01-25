@@ -15,3 +15,7 @@ closeBtn.addEventListener('click', ()=>{
     sideMenu.style.display  = 'none';
 });
  
+
+$(document).ready( function () {
+    $('#articles-table').DataTable();
+} );
