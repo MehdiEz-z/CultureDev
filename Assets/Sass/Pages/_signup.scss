@@ -101,6 +101,12 @@
                 opacity: 0;
             }
         }
+        .image-upl{
+            width: 100%;
+            input{
+                width: 100%;
+            }
+        }
         .text{
             @include font(.65rem,400,$grey);
             a{

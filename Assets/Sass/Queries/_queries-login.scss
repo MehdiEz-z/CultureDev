@@ -1,0 +1,32 @@
+@media screen and (max-width: 850px){
+    .users{
+        .box{
+            height: 700px;
+            max-width: 600px;
+            overflow: hidden;
+            border-radius: 2rem;
+            .interior-box{
+                .forms{
+                    position: revert;
+                    @include w-h(100%,100%);
+                    form{
+                        max-width: revert;
+                        padding: 1.5rem 2.5rem 2rem;
+                    }
+                }
+                .carousel{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 610px){
+    .users{
+        padding: 1rem;
+        .box{
+            border-radius: 1.8rem;
+        }
+    }
+}
